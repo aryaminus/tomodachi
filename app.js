@@ -1,4 +1,5 @@
 const express = require("express"),
+  { Client } = require("pg"),
   passport = require("passport"),
   FacebookTokenStrategy = require("passport-facebook-token"),
   cors = require("cors"),
@@ -16,6 +17,13 @@ const app = express(),
     exposedHeaders: ["x-auth-token"]
   };
 
+//Define Postgres parameters
+let connectionString = "postgresql://localhost/arms";
+const client = new Client({
+  connectionString: connectionString
+});
+client.connect();
+
 // Use the FacebookStrategy within Passport.
 passport.use(
   new FacebookTokenStrategy(
@@ -25,6 +33,28 @@ passport.use(
     },
     function(accessToken, refreshToken, profile, done) {
       process.nextTick(function() {
+        //Check whether the User exists or not using profile.id
+        if (config.use_database) {
+          // if sets to true
+          client.query(
+            "SELECT * from users where user_id=" + profile.id,
+            (err, rows) => {
+              if (err) throw err;
+              if (rows && rows.rowCount === 0) {
+                console.log("There is no such user, adding now");
+                client.query(
+                  "INSERT into users(user_id,user_name) VALUES('" +
+                    profile.id +
+                    "','" +
+                    profile.displayName +
+                    "')"
+                );
+              } else {
+                console.log("User already exists in database");
+              }
+            }
+          );
+        }
         return done(null, profile);
       });
     }
