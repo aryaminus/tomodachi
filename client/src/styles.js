@@ -28,6 +28,7 @@ export const FacebookContainer = styled.div({
 
 export const ContactsContainer = styled.div({
   display: "flex",
+  flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
   position: "absolute",
@@ -35,3 +36,5 @@ export const ContactsContainer = styled.div({
   top: "50%",
   transform: "translate(-50%, -50%)"
 });
+
+export const Contact = styled.div({});

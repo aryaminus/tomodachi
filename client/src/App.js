@@ -12,6 +12,28 @@ import { Container, Button } from "react-floating-action-button";
 
 // imports
 import AddContact from "./components/AddContact";
+import ContactInfo from "./components/ContactInfo";
+
+var contactsArray = [
+  {
+    firstName: "Mary",
+    lastName: "Blanchard",
+    phone: "555-1234",
+    email: "snowwhite@ouatmail.com"
+  },
+  {
+    firstName: "David",
+    lastName: "Nolan",
+    phone: "555-9876",
+    email: "princecharming@ouatmail.com"
+  },
+  {
+    firstName: "Emma",
+    lastName: "Swan",
+    phone: "555-2345",
+    email: "thesavior@ouatmail.com"
+  }
+];
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
@@ -19,6 +41,7 @@ function App() {
   const [token, setToken] = useState("");
 
   const [addModal, showAddModal] = useState(false);
+  const [person, setPerson] = useState(null);
 
   const responseFacebook = response => {
     console.log(response);
@@ -57,7 +80,26 @@ function App() {
         </S.FacebookContainer>
       ) : (
         <>
-          <S.ContactsContainer>Contact List </S.ContactsContainer>
+          <S.ContactsContainer>
+            <div className="left">
+              <h2>Contact List</h2>
+              {contactsArray.map(function(c) {
+                var contactStyles = {
+                  backgroundColor: c === person ? "#bbdefb" : ""
+                };
+                return (
+                  <S.Contact onClick={() => setPerson(c)} style={contactStyles}>
+                    <span>
+                      {c.firstName} {c.lastName}
+                    </span>
+                  </S.Contact>
+                );
+              }, this)}
+            </div>
+            <div className="right">
+              <ContactInfo person={person} />
+            </div>
+          </S.ContactsContainer>
           <Container>
             <Button
               tooltip="Add Contact"
