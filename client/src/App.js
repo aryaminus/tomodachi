@@ -3,15 +3,20 @@ import React, { useState } from "react";
 //styles
 import * as S from "./styles";
 import background from "./images/background.svg";
+import "rodal/lib/rodal.css";
 
 // custom components
 import FacebookLogin from "react-facebook-login";
+import Rodal from "rodal";
+
 import { Container, Button } from "react-floating-action-button";
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
   const [user, setUser] = useState({});
   const [token, setToken] = useState("");
+
+  const [addModal, showAddModal] = useState(false);
 
   const responseFacebook = response => {
     console.log(response);
@@ -40,7 +45,7 @@ function App() {
   return (
     <div className="App">
       <S.Background src={background} />
-      {!isAuthenticated ? (
+      {isAuthenticated ? (
         <S.FacebookContainer>
           <FacebookLogin
             appId="2430182417265110"
@@ -56,7 +61,7 @@ function App() {
               tooltip="Add Contact"
               // icon="fa-plus"
               rotate={true}
-              onClick={() => alert("Add Contact")}
+              onClick={() => showAddModal(true)}
               styles={{
                 backgroundColor: "#bbdefb",
                 color: "#0d47a1",
@@ -66,6 +71,16 @@ function App() {
               +
             </Button>
           </Container>
+          <Rodal
+            visible={addModal}
+            onClose={() => showAddModal(false)}
+            customStyles={{
+              background: "#bbdefb",
+              borderRadius: 15
+            }}
+          >
+            <div>Add Contact</div>
+          </Rodal>
         </>
       )}
     </div>

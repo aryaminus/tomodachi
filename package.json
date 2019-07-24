@@ -26,7 +26,8 @@
     "passport": "0.2.1",
     "passport-facebook-token": "^3.3.0",
     "pg": "^7.11.0",
-    "react-floating-action-button": "^1.0.5"
+    "react-floating-action-button": "^1.0.5",
+    "rodal": "^1.6.3"
   },
   "devDependencies": {
     "concurrently": "^4.0.1"
