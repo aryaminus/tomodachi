@@ -86,6 +86,99 @@ app.post(
   sendToken
 );
 
+app.get("/contacts/get/:id", (req, res) => {
+  client.query(
+    "SELECT * from contacts where user_id=" + req.params.user_id,
+    (err, rows) => {
+      if (err) throw err;
+      if (rows && rows.rowCount === 0) {
+        return res.json({
+          data: rows
+        });
+      } else {
+        return res.json({
+          data: "No content"
+        });
+      }
+    }
+  );
+});
+
+app.post("/api/contacts/add", (req, res) => {
+  client.query("SELECT * from contacts", (err, rows) => {
+    if (err) throw err;
+    client.query(
+      "INSERT into users(user_id,firstName, lastName, email, phone) VALUES('" +
+        req.params.user_id +
+        "','" +
+        req.params.firstName +
+        "','" +
+        req.params.lastName +
+        "','" +
+        req.params.email +
+        "','" +
+        req.params.phone +
+        "')"
+    );
+    return res.json({
+      data: "Field Added"
+    });
+  });
+});
+
+app.delete("/api/contacts/delete/:id", (req, res) => {
+  client.query("SELECT * from contacts", (err, rows) => {
+    if (err) throw err;
+    client.query(
+      "DELETE FROM contacts WHERE user_id=" +
+        req.params.user_id +
+        " AND id=" +
+        req.params.id
+    );
+    return res.json({
+      data: "Field Deleted"
+    });
+  });
+});
+
+app.get("/api/contacts/edit/:id", (req, res) => {
+  client.query("SELECT * from contacts", (err, rows) => {
+    if (err) throw err;
+    client.query(
+      "SELECT * FROM contacts WHERE user_id=" +
+        req.params.user_id +
+        " AND id=" +
+        req.params.id
+    );
+    return res.json({
+      data: "Field Deleted"
+    });
+  });
+});
+
+app.put("/api/contacts/update/:id", (req, res) => {
+  client.query("SELECT * from contacts", (err, rows) => {
+    if (err) throw err;
+    client.query(
+      "UPDATE contacts SET firstName=" +
+        req.params.firstName +
+        ", lastName=" +
+        req.params.lastName +
+        ", email=" +
+        req.params.email +
+        ", phone=" +
+        req.params.phone +
+        " WHERE user_id=" +
+        req.params.user_id +
+        " AND id=" +
+        req.params.id
+    );
+    return res.json({
+      data: "Field Updated"
+    });
+  });
+});
+
 // app.get("/account", ensureAuthenticated, function(req, res) {
 //   res.render("account", { user: req.user });
 // });
