@@ -1,15 +1,5 @@
 import styled from "styled-components";
 
-export const FacebookContainer = styled.div({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  position: "absolute",
-  left: "50%",
-  top: "50%",
-  transform: "translate(-50%, -50%)"
-});
-
 export const Background = styled.img({
   position: "fixed",
   left: 0,
@@ -24,4 +14,24 @@ export const Background = styled.img({
   objectFit: "cover",
   transition: "all 150ms ease-in",
   opacity: 1
+});
+
+export const FacebookContainer = styled.div({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  position: "absolute",
+  left: "50%",
+  top: "50%",
+  transform: "translate(-50%, -50%)"
+});
+
+export const ContactsContainer = styled.div({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  position: "absolute",
+  left: "50%",
+  top: "50%",
+  transform: "translate(-50%, -50%)"
 });

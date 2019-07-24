@@ -6,6 +6,7 @@ import background from "./images/background.svg";
 
 // custom components
 import FacebookLogin from "react-facebook-login";
+import { Container, Button } from "react-floating-action-button";
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
@@ -47,7 +48,26 @@ function App() {
             callback={responseFacebook}
           />
         </S.FacebookContainer>
-      ) : null}
+      ) : (
+        <>
+          <S.ContactsContainer>Contact List </S.ContactsContainer>
+          <Container>
+            <Button
+              tooltip="Add Contact"
+              // icon="fa-plus"
+              rotate={true}
+              onClick={() => alert("Add Contact")}
+              styles={{
+                backgroundColor: "#bbdefb",
+                color: "#0d47a1",
+                fontSize: 32
+              }}
+            >
+              +
+            </Button>
+          </Container>
+        </>
+      )}
     </div>
   );
 }
