@@ -8,8 +8,10 @@ import "rodal/lib/rodal.css";
 // custom components
 import FacebookLogin from "react-facebook-login";
 import Rodal from "rodal";
-
 import { Container, Button } from "react-floating-action-button";
+
+// imports
+import AddContact from "./components/AddContact";
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
@@ -76,10 +78,13 @@ function App() {
             onClose={() => showAddModal(false)}
             customStyles={{
               background: "#bbdefb",
-              borderRadius: 15
+              borderRadius: 15,
+              width: 320,
+              height: 300
             }}
           >
             <div>Add Contact</div>
+            <AddContact />
           </Rodal>
         </>
       )}
