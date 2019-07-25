@@ -88,12 +88,12 @@ app.post(
 
 app.get("/contacts/get/:id", (req, res) => {
   client.query(
-    "SELECT * from contacts where user_id=" + req.params.user_id,
+    "SELECT * from contacts where user_id=" + req.params.id,
     (err, rows) => {
       if (err) throw err;
-      if (rows && rows.rowCount === 0) {
+      if (rows) {
         return res.json({
-          data: rows
+          data: rows.rows
         });
       } else {
         return res.json({
@@ -108,16 +108,16 @@ app.post("/api/contacts/add", (req, res) => {
   client.query("SELECT * from contacts", (err, rows) => {
     if (err) throw err;
     client.query(
-      "INSERT into users(user_id,firstName, lastName, email, phone) VALUES('" +
-        req.params.user_id +
+      "INSERT into contacts(user_id,firstName, lastName, email, phone) VALUES('" +
+        req.body.user_id +
         "','" +
-        req.params.firstName +
+        req.body.firstName +
         "','" +
-        req.params.lastName +
+        req.body.lastName +
         "','" +
-        req.params.email +
+        req.body.email +
         "','" +
-        req.params.phone +
+        req.body.phone +
         "')"
     );
     return res.json({
