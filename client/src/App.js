@@ -40,6 +40,7 @@ function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
   const [user, setUser] = useState({});
   const [token, setToken] = useState("");
+  const [contactList, setContactList] = useState([]);
 
   const [addModal, showAddModal] = useState(false);
   const [person, setPerson] = useState(null);
@@ -72,8 +73,8 @@ function App() {
 
   const getContact = async user_id => {
     console.log(user_id);
-    await axios.get(`/contacts/get/${user_id}`).then(result => {
-      console.log(result);
+    await axios.get(`/api/contacts/get/${user_id}`).then(result => {
+      setContactList(result.data.data);
     });
   };
 
@@ -93,18 +94,23 @@ function App() {
           <S.ContactsContainer>
             <S.ContactList>
               <h2>Contact List</h2>
-              {contactsArray.map(function(c) {
-                var contactStyles = {
-                  backgroundColor: c === person ? "#bbdefb" : ""
-                };
-                return (
-                  <S.Contact onClick={() => setPerson(c)} style={contactStyles}>
-                    <span>
-                      {c.firstName} {c.lastName}
-                    </span>
-                  </S.Contact>
-                );
-              }, this)}
+
+              {contactsArray !== [] &&
+                contactsArray.map(function(c) {
+                  var contactStyles = {
+                    backgroundColor: c === person ? "#bbdefb" : ""
+                  };
+                  return (
+                    <S.Contact
+                      onClick={() => setPerson(c)}
+                      style={contactStyles}
+                    >
+                      <span>
+                        {c.firstName} {c.lastName}
+                      </span>
+                    </S.Contact>
+                  );
+                }, this)}
             </S.ContactList>
             <S.ContactInfo>
               <ContactInfo person={person} />

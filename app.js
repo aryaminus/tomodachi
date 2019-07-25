@@ -86,7 +86,7 @@ app.post(
   sendToken
 );
 
-app.get("/contacts/get/:id", (req, res) => {
+app.get("/api/contacts/get/:id", (req, res) => {
   client.query(
     "SELECT * from contacts where user_id=" + req.params.id,
     (err, rows) => {
