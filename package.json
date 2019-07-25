@@ -9,7 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon app.js",
     "client": "cd client && yarn start",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "heroku-postbuild": "yarn --prefix client && yarn build --prefix client"
   },
   "keywords": [
     "nodejs",
