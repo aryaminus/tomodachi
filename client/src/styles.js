@@ -37,4 +37,18 @@ export const ContactsContainer = styled.div({
   transform: "translate(-50%, -50%)"
 });
 
-export const Contact = styled.div({});
+export const Contact = styled.div({
+  margin: "0 0 1rem 0",
+  padding: 3,
+  textAlign: "center"
+});
+
+export const ContactList = styled.div({
+  //   background: "#E6343B"
+});
+
+export const ContactInfo = styled.div({
+  margin: "0 0 0 1rem",
+  padding: 3
+  //   background: "#fff"
+});

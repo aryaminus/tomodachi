@@ -81,7 +81,7 @@ function App() {
       ) : (
         <>
           <S.ContactsContainer>
-            <div className="left">
+            <S.ContactList>
               <h2>Contact List</h2>
               {contactsArray.map(function(c) {
                 var contactStyles = {
@@ -95,10 +95,10 @@ function App() {
                   </S.Contact>
                 );
               }, this)}
-            </div>
-            <div className="right">
+            </S.ContactList>
+            <S.ContactInfo>
               <ContactInfo person={person} />
-            </div>
+            </S.ContactInfo>
           </S.ContactsContainer>
           <Container>
             <Button
