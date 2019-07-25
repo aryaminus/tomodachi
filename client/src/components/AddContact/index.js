@@ -6,7 +6,7 @@ import * as S from "./styles";
 // custom components
 import axios from "axios";
 
-function AddContact({ user_id }) {
+function AddContact({ user_id, getContact }) {
   const [firstName, setFirstName] = useState(``);
   const [lastName, setLastName] = useState(``);
   const [email, setEmail] = useState(``);
@@ -44,6 +44,7 @@ function AddContact({ user_id }) {
         )
         .then(result => {
           console.log(result);
+          getContact(user_id);
           setServer(1);
         });
     }

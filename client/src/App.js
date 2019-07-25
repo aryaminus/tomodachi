@@ -142,7 +142,7 @@ function App() {
             }}
           >
             <div>Add Contact</div>
-            <AddContact user_id={user.id} />
+            <AddContact user_id={user.id} getContact={getContact} />
           </Rodal>
         </>
       )}
