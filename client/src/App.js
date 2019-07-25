@@ -7,6 +7,7 @@ import "rodal/lib/rodal.css";
 
 // custom components
 import FacebookLogin from "react-facebook-login";
+import axios from "axios";
 import Rodal from "rodal";
 import { Container, Button } from "react-floating-action-button";
 
@@ -43,7 +44,7 @@ function App() {
   const [addModal, showAddModal] = useState(false);
   const [person, setPerson] = useState(null);
 
-  const responseFacebook = async response => {
+  const responseFacebook = response => {
     console.log(response);
     const tokenBlob = new Blob(
       [JSON.stringify({ access_token: response.accessToken }, null, 2)],
@@ -63,15 +64,23 @@ function App() {
           setAuthenticated(true);
           setUser(user);
           setToken(token);
+          getContact(user.id);
         }
       });
+    });
+  };
+
+  const getContact = async user_id => {
+    console.log(user_id);
+    await axios.get(`/contacts/get/${user_id}`).then(result => {
+      console.log(result);
     });
   };
 
   return (
     <div className="App">
       <S.Background src={background} />
-      {!isAuthenticated ? (
+      {!isAuthenticated && user !== {} ? (
         <S.FacebookContainer>
           <FacebookLogin
             appId="2430182417265110"

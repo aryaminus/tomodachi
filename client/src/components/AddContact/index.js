@@ -36,7 +36,7 @@ function AddContact({ user_id }) {
   const send = async () => {
     checkFormErrors(firstName, lastName, email, phone);
     if (output === true) {
-      const newContact = { firstName, lastName, email, phone };
+      const newContact = { user_id, firstName, lastName, email, phone };
       await axios
         .post(
           `/api/contacts/add?user_id=${user_id}&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`,
