@@ -3,7 +3,10 @@ import React, { useState } from "react";
 //styles
 import * as S from "./styles";
 
-function AddContact(user_id) {
+// custom components
+import axios from "axios";
+
+function AddContact({ user_id }) {
   const [firstName, setFirstName] = useState(``);
   const [lastName, setLastName] = useState(``);
   const [email, setEmail] = useState(``);
@@ -32,8 +35,18 @@ function AddContact(user_id) {
 
   const send = async () => {
     checkFormErrors(firstName, lastName, email, phone);
-    // alert("send");
-    setServer(1);
+    if (output === true) {
+      const newContact = { firstName, lastName, email, phone };
+      await axios
+        .post(
+          `/api/contacts/add?user_id=${user_id}&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`,
+          newContact
+        )
+        .then(result => {
+          console.log(result);
+          setServer(1);
+        });
+    }
   };
 
   return (

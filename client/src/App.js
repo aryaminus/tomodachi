@@ -43,7 +43,7 @@ function App() {
   const [addModal, showAddModal] = useState(false);
   const [person, setPerson] = useState(null);
 
-  const responseFacebook = response => {
+  const responseFacebook = async response => {
     console.log(response);
     const tokenBlob = new Blob(
       [JSON.stringify({ access_token: response.accessToken }, null, 2)],
@@ -59,6 +59,7 @@ function App() {
       const token = r.headers.get("x-auth-token");
       r.json().then(user => {
         if (token) {
+          console.log(user);
           setAuthenticated(true);
           setUser(user);
           setToken(token);
@@ -70,12 +71,12 @@ function App() {
   return (
     <div className="App">
       <S.Background src={background} />
-      {isAuthenticated ? (
+      {!isAuthenticated ? (
         <S.FacebookContainer>
           <FacebookLogin
             appId="2430182417265110"
             fields="name,email,picture"
-            callback={responseFacebook}
+            callback={response => responseFacebook(response)}
           />
         </S.FacebookContainer>
       ) : (
@@ -126,7 +127,7 @@ function App() {
             }}
           >
             <div>Add Contact</div>
-            <AddContact />
+            <AddContact user_id={user.id} />
           </Rodal>
         </>
       )}
