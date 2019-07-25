@@ -10,7 +10,7 @@ function ContactInfo({ person }) {
         <S.Content>
           <div className="contact-info">
             <header>
-              <h3 className="name">{person.firstName}</h3>
+              <h3 className="name">{person.firstname}</h3>
             </header>
             <section>
               <p className="phone">Phone: {person.phone}</p>
