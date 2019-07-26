@@ -6,7 +6,7 @@ import * as S from "./styles";
 // custom components
 import axios from "axios";
 
-function ContactInfo({ person, getContact }) {
+function ContactInfo({ person, getContact, sethideContact }) {
   const edit = async () => {
     // checkFormErrors(firstName, lastName, email, phone);
     // if (output === true) {
@@ -30,6 +30,7 @@ function ContactInfo({ person, getContact }) {
     await axios.delete(`/api/contacts/delete/${person.id}`).then(result => {
       console.log(result);
       getContact(person.user_id);
+      sethideContact(true);
     });
   };
 

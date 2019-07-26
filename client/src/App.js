@@ -22,6 +22,7 @@ function App() {
   const [contactList, setContactList] = useState([]);
 
   const [addModal, showAddModal] = useState(false);
+  const [hideContact, sethideContact] = useState(false);
   const [person, setPerson] = useState(null);
 
   const responseFacebook = response => {
@@ -82,7 +83,10 @@ function App() {
                   };
                   return (
                     <S.Contact
-                      onClick={() => setPerson(c)}
+                      onClick={() => {
+                        setPerson(c);
+                        sethideContact(false);
+                      }}
                       style={contactStyles}
                     >
                       <span>
@@ -92,9 +96,16 @@ function App() {
                   );
                 }, this)}
             </S.ContactList>
-            <S.ContactInfo>
-              <ContactInfo person={person} getContact={getContact} />
-            </S.ContactInfo>
+
+            {!hideContact && (
+              <S.ContactInfo>
+                <ContactInfo
+                  person={person}
+                  getContact={getContact}
+                  sethideContact={sethideContact}
+                />
+              </S.ContactInfo>
+            )}
           </S.ContactsContainer>
           <Container>
             <Button
