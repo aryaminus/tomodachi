@@ -18,7 +18,7 @@ const app = express(),
     exposedHeaders: ["x-auth-token"]
   };
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 5000;
 
 //Define Postgres parameters
 // let connectionString = "postgresql://localhost/arms";
@@ -70,11 +70,11 @@ passport.use(
 app.use(cors(corsOption));
 app.use(cookieParser());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", function(req, res) {
-  res.render("index", { user: req.user });
-});
+// app.get("/", function(req, res) {
+//   res.render("index", { user: req.user });
+// });
 
 app.post(
   "/auth/facebook",
