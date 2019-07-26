@@ -5,17 +5,12 @@ export const Content = styled.div({
   marginBottom: "auto"
 });
 
-export const Input = styled.textarea({
-  borderRadius: 3,
-  padding: 10,
-  marginTop: 3,
-  marginBottom: 3,
-  border: "none",
-  outline: "none",
-  minHeight: 20,
-  width: "80%",
-  resize: "none",
-  borderBottom: "2px solid #0d47a1"
+export const Info = styled.div({});
+
+export const Buttons = styled.div({
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-around"
 });
 
 export const Button = styled.button({

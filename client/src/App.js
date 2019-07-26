@@ -54,6 +54,7 @@ function App() {
     console.log(user_id);
     await axios.get(`/api/contacts/get/${user_id}`).then(result => {
       setContactList(result.data.data);
+      console.log(result.data.data);
     });
   };
 
@@ -92,7 +93,7 @@ function App() {
                 }, this)}
             </S.ContactList>
             <S.ContactInfo>
-              <ContactInfo person={person} />
+              <ContactInfo person={person} getContact={getContact} />
             </S.ContactInfo>
           </S.ContactsContainer>
           <Container>

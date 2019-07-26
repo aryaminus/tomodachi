@@ -91,7 +91,7 @@ function AddContact({ user_id, getContact, showAddModal }) {
           onChange={e => setPhone(e.target.value)}
         />
 
-        <S.Button onClick={send} role="button" tabIndex={0}>
+        <S.Button onClick={() => send}>
           <span>Send</span>
         </S.Button>
       </center>

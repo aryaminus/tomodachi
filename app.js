@@ -132,12 +132,7 @@ app.post("/api/contacts/add", (req, res) => {
 app.delete("/api/contacts/delete/:id", (req, res) => {
   client.query("SELECT * from contacts", (err, rows) => {
     if (err) throw err;
-    client.query(
-      "DELETE FROM contacts WHERE user_id=" +
-        req.params.user_id +
-        " AND id=" +
-        req.params.id
-    );
+    client.query("DELETE FROM contacts WHERE id=" + req.params.id);
     return res.json({
       data: "Field Deleted"
     });
