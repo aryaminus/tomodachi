@@ -12,23 +12,6 @@ import EditContact from "../EditContact";
 
 function ContactInfo({ person, getContact, sethideContact }) {
   const [editModal, showEditModal] = useState(false);
-  const edit = async () => {
-    // checkFormErrors(firstName, lastName, email, phone);
-    // if (output === true) {
-    //   const newContact = { user_id, firstName, lastName, email, phone };
-    //   await axios
-    //     .post(
-    //       `/api/contacts/add?user_id=${user_id}&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`,
-    //       newContact
-    //     )
-    //     .then(result => {
-    //       console.log(result);
-    //       getContact(user_id);
-    //       showAddModal(false);
-    //       setServer(1);
-    //     });
-    // }
-  };
 
   const dalete = async () => {
     console.log(person);
