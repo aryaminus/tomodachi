@@ -158,18 +158,11 @@ app.put("/api/contacts/update/:id", (req, res) => {
   client.query("SELECT * from contacts", (err, rows) => {
     if (err) throw err;
     client.query(
-      "UPDATE contacts SET firstName=" +
-        req.params.firstName +
-        ", lastName=" +
-        req.params.lastName +
-        ", email=" +
-        req.params.email +
-        ", phone=" +
-        req.params.phone +
-        " WHERE user_id=" +
-        req.params.user_id +
-        " AND id=" +
-        req.params.id
+      `UPDATE contacts SET firstname = '${req.query.firstName}', lastname = '${
+        req.query.lastName
+      }', email = '${req.query.email}', phone = '${
+        req.query.phone
+      }' WHERE id = ${req.params.id}`
     );
     return res.json({
       data: "Field Updated"
