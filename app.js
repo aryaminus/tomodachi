@@ -1,4 +1,5 @@
 const express = require("express"),
+  path = require("path"),
   { Client } = require("pg"),
   passport = require("passport"),
   FacebookTokenStrategy = require("passport-facebook-token"),
@@ -16,6 +17,8 @@ const app = express(),
     credentials: true,
     exposedHeaders: ["x-auth-token"]
   };
+
+const port = process.env.PORT || 4000;
 
 //Define Postgres parameters
 // let connectionString = "postgresql://localhost/arms";
@@ -186,4 +189,14 @@ app.put("/api/contacts/update/:id", (req, res) => {
 //   res.redirect("/login");
 // }
 
-app.listen(4000);
+if (process.env.NODE_ENV === "production") {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, "client/build")));
+
+  // Handle React routing, return all requests to React app
+  app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  });
+}
+
+app.listen(port, () => console.log(`Listening on port ${port}`));

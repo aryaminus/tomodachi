@@ -8,7 +8,9 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-facebook-login": "^4.1.1",
+    "react-floating-action-button": "^1.0.5",
     "react-scripts": "3.0.1",
+    "rodal": "^1.6.3",
     "styled-components": "^4.3.2"
   },
   "scripts": {

@@ -7,10 +7,12 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon app.js",
+    "server": "node app.js",
+    "start": "node server.js",
     "client": "cd client && yarn start",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "heroku-postbuild": "yarn --prefix client && yarn build --prefix client"
+    "dev:server": "cd client && yarn build && cd .. && yarn start",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "keywords": [
     "nodejs",
@@ -26,9 +28,7 @@
     "jsonwebtoken": "^8.5.1",
     "passport": "0.2.1",
     "passport-facebook-token": "^3.3.0",
-    "pg": "^7.11.0",
-    "react-floating-action-button": "^1.0.5",
-    "rodal": "^1.6.3"
+    "pg": "^7.11.0"
   },
   "devDependencies": {
     "concurrently": "^4.0.1"
