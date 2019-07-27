@@ -7,6 +7,21 @@ export const Content = styled.div({
 
 export const Info = styled.div({});
 
+export const Name = styled.div({
+  fontSize: "24px",
+  color: "#223448"
+});
+
+export const Phone = styled.div({
+  display: "flex",
+  flexDirection: "row"
+});
+
+export const Email = styled.div({
+  display: "flex",
+  flexDirection: "row"
+});
+
 export const Buttons = styled.div({
   display: "flex",
   flexDirection: "row",
@@ -22,5 +37,12 @@ export const Button = styled.button({
   padding: 10,
   width: "100%",
   transition: "all 150ms linear",
-  boxShadow: "0px 1px 1px rgba(0, 0, 0, 0.2)"
+  background: "transparent",
+  "&:hover": {
+    color: "#fff",
+    transform: "scale(1.05)",
+    cursor: "pointer",
+    userSelect: "none !important"
+  }
+  // boxShadow: "0px 1px 1px rgba(0, 0, 0, 0.2)"
 });

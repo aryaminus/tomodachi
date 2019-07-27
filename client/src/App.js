@@ -135,11 +135,11 @@ function App() {
             customStyles={{
               background: "#bbdefb",
               borderRadius: 15,
-              width: 320,
-              height: 300
+              width: 325,
+              height: 350
             }}
           >
-            <div>Add Contact</div>
+            <S.AddContactTitle>Add Contact</S.AddContactTitle>
             <AddContact
               user_id={user.id}
               getContact={getContact}

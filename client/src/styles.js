@@ -63,7 +63,8 @@ export const ContactsContainer = styled.div({
   position: "absolute",
   left: "50%",
   top: "50%",
-  transform: "translate(-50%, -50%)"
+  transform: "translate(-50%, -50%)",
+  boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)"
 });
 
 export const Bar = styled.div({
@@ -98,4 +99,10 @@ export const ContactInfo = styled.div({
   margin: "0 0 0 1rem",
   padding: 3
   //   background: "#fff"
+});
+
+export const AddContactTitle = styled.div({
+  fontSize: "20px",
+  fontWeight: "bold",
+  color: "#0a2d63"
 });
