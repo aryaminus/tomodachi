@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "tomodachi-tvOS.app"
-               BlueprintName = "tomodachi-tvOS"
-               ReferencedContainer = "container:tomodachi.xcodeproj">
+               BuildableName = "Tomodachi-tvOS.app"
+               BlueprintName = "Tomodachi-tvOS"
+               ReferencedContainer = "container:Tomodachi.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "tomodachi-tvOSTests.xctest"
-               BlueprintName = "tomodachi-tvOSTests"
-               ReferencedContainer = "container:tomodachi.xcodeproj">
+               BuildableName = "Tomodachi-tvOSTests.xctest"
+               BlueprintName = "Tomodachi-tvOSTests"
+               ReferencedContainer = "container:Tomodachi.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "tomodachi-tvOSTests.xctest"
-               BlueprintName = "tomodachi-tvOSTests"
-               ReferencedContainer = "container:tomodachi.xcodeproj">
+               BuildableName = "Tomodachi-tvOSTests.xctest"
+               BlueprintName = "Tomodachi-tvOSTests"
+               ReferencedContainer = "container:Tomodachi.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "tomodachi-tvOS.app"
-            BlueprintName = "tomodachi-tvOS"
-            ReferencedContainer = "container:tomodachi.xcodeproj">
+            BuildableName = "Tomodachi-tvOS.app"
+            BlueprintName = "Tomodachi-tvOS"
+            ReferencedContainer = "container:Tomodachi.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "tomodachi-tvOS.app"
-            BlueprintName = "tomodachi-tvOS"
-            ReferencedContainer = "container:tomodachi.xcodeproj">
+            BuildableName = "Tomodachi-tvOS.app"
+            BlueprintName = "Tomodachi-tvOS"
+            ReferencedContainer = "container:Tomodachi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "tomodachi-tvOS.app"
-            BlueprintName = "tomodachi-tvOS"
-            ReferencedContainer = "container:tomodachi.xcodeproj">
+            BuildableName = "Tomodachi-tvOS.app"
+            BlueprintName = "Tomodachi-tvOS"
+            ReferencedContainer = "container:Tomodachi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

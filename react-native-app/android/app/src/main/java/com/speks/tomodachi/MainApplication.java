@@ -1,4 +1,4 @@
-package com.tomodachi;
+package com.speks.tomodachi;
 
 import android.app.Application;
 import android.util.Log;

@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* tomodachiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* tomodachiTests.m */; };
+		00E356F31AD99517003FC87E /* TomodachiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TomodachiTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		199BE4243E0E907AD6711BFF /* libPods-tomodachi-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1C21154BC59419B7D77578 /* libPods-tomodachi-tvOSTests.a */; };
+		199BE4243E0E907AD6711BFF /* libPods-Tomodachi-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1C21154BC59419B7D77578 /* libPods-Tomodachi-tvOSTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* tomodachiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* tomodachiTests.m */; };
-		2EBA1A8EBC8AD2FBFFDB6D73 /* libPods-tomodachiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98DB2F4F7AB2C62DF3B7220A /* libPods-tomodachiTests.a */; };
-		717F63BD0FED24251AA0AC2F /* libPods-tomodachi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FC59F7FCFB945D021D282F /* libPods-tomodachi.a */; };
-		EB8866CCCF837A74329E1791 /* libPods-tomodachi-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42671E7057C748C20A04CB60 /* libPods-tomodachi-tvOS.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* TomodachiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TomodachiTests.m */; };
+		2EBA1A8EBC8AD2FBFFDB6D73 /* libPods-TomodachiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98DB2F4F7AB2C62DF3B7220A /* libPods-TomodachiTests.a */; };
+		717F63BD0FED24251AA0AC2F /* libPods-Tomodachi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FC59F7FCFB945D021D282F /* libPods-Tomodachi.a */; };
+		EB8866CCCF837A74329E1791 /* libPods-Tomodachi-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42671E7057C748C20A04CB60 /* libPods-Tomodachi-tvOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,43 +28,43 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = tomodachi;
+			remoteInfo = Tomodachi;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "tomodachi-tvOS";
+			remoteInfo = "Tomodachi-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* tomodachiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tomodachiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* TomodachiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomodachiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* tomodachiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tomodachiTests.m; sourceTree = "<group>"; };
-		02FC59F7FCFB945D021D282F /* libPods-tomodachi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tomodachi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07F961A680F5B00A75B9A /* tomodachi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tomodachi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = tomodachi/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = tomodachi/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* TomodachiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TomodachiTests.m; sourceTree = "<group>"; };
+		02FC59F7FCFB945D021D282F /* libPods-Tomodachi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tomodachi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* Tomodachi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomodachi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Tomodachi/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Tomodachi/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = tomodachi/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = tomodachi/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = tomodachi/main.m; sourceTree = "<group>"; };
-		1493425A0F91C4C584D35AF2 /* Pods-tomodachi-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomodachi-tvOS.release.xcconfig"; path = "Target Support Files/Pods-tomodachi-tvOS/Pods-tomodachi-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		23961B6457CA8DD8D6F42359 /* Pods-tomodachi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomodachi.release.xcconfig"; path = "Target Support Files/Pods-tomodachi/Pods-tomodachi.release.xcconfig"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* tomodachi-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tomodachi-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* tomodachi-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tomodachi-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		42671E7057C748C20A04CB60 /* libPods-tomodachi-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tomodachi-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A1C21154BC59419B7D77578 /* libPods-tomodachi-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tomodachi-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		989E97735AC3FA0DFC949D40 /* Pods-tomodachi-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomodachi-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-tomodachi-tvOS/Pods-tomodachi-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		98DB2F4F7AB2C62DF3B7220A /* libPods-tomodachiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tomodachiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B513D08445831BF5961C722B /* Pods-tomodachiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomodachiTests.release.xcconfig"; path = "Target Support Files/Pods-tomodachiTests/Pods-tomodachiTests.release.xcconfig"; sourceTree = "<group>"; };
-		BC9E9F18AAAD090D92F6A42D /* Pods-tomodachi-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomodachi-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-tomodachi-tvOSTests/Pods-tomodachi-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		BF02243B1285D92D12857952 /* Pods-tomodachi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomodachi.debug.xcconfig"; path = "Target Support Files/Pods-tomodachi/Pods-tomodachi.debug.xcconfig"; sourceTree = "<group>"; };
-		C789498E08EEFF1E3B1CD17D /* Pods-tomodachi-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomodachi-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-tomodachi-tvOSTests/Pods-tomodachi-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CF0156833393475FD0709765 /* Pods-tomodachiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomodachiTests.debug.xcconfig"; path = "Target Support Files/Pods-tomodachiTests/Pods-tomodachiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Tomodachi/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tomodachi/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Tomodachi/main.m; sourceTree = "<group>"; };
+		1493425A0F91C4C584D35AF2 /* Pods-Tomodachi-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tomodachi-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Tomodachi-tvOS/Pods-Tomodachi-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		23961B6457CA8DD8D6F42359 /* Pods-Tomodachi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tomodachi.release.xcconfig"; path = "Target Support Files/Pods-Tomodachi/Pods-Tomodachi.release.xcconfig"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* Tomodachi-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tomodachi-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* Tomodachi-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tomodachi-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42671E7057C748C20A04CB60 /* libPods-Tomodachi-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tomodachi-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A1C21154BC59419B7D77578 /* libPods-Tomodachi-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tomodachi-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		989E97735AC3FA0DFC949D40 /* Pods-Tomodachi-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tomodachi-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Tomodachi-tvOS/Pods-Tomodachi-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		98DB2F4F7AB2C62DF3B7220A /* libPods-TomodachiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TomodachiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B513D08445831BF5961C722B /* Pods-TomodachiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomodachiTests.release.xcconfig"; path = "Target Support Files/Pods-TomodachiTests/Pods-TomodachiTests.release.xcconfig"; sourceTree = "<group>"; };
+		BC9E9F18AAAD090D92F6A42D /* Pods-Tomodachi-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tomodachi-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Tomodachi-tvOSTests/Pods-Tomodachi-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF02243B1285D92D12857952 /* Pods-Tomodachi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tomodachi.debug.xcconfig"; path = "Target Support Files/Pods-Tomodachi/Pods-Tomodachi.debug.xcconfig"; sourceTree = "<group>"; };
+		C789498E08EEFF1E3B1CD17D /* Pods-Tomodachi-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tomodachi-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Tomodachi-tvOSTests/Pods-Tomodachi-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF0156833393475FD0709765 /* Pods-TomodachiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomodachiTests.debug.xcconfig"; path = "Target Support Files/Pods-TomodachiTests/Pods-TomodachiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EBA1A8EBC8AD2FBFFDB6D73 /* libPods-tomodachiTests.a in Frameworks */,
+				2EBA1A8EBC8AD2FBFFDB6D73 /* libPods-TomodachiTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				717F63BD0FED24251AA0AC2F /* libPods-tomodachi.a in Frameworks */,
+				717F63BD0FED24251AA0AC2F /* libPods-Tomodachi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB8866CCCF837A74329E1791 /* libPods-tomodachi-tvOS.a in Frameworks */,
+				EB8866CCCF837A74329E1791 /* libPods-Tomodachi-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,20 +98,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				199BE4243E0E907AD6711BFF /* libPods-tomodachi-tvOSTests.a in Frameworks */,
+				199BE4243E0E907AD6711BFF /* libPods-Tomodachi-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* tomodachiTests */ = {
+		00E356EF1AD99517003FC87E /* TomodachiTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* tomodachiTests.m */,
+				00E356F21AD99517003FC87E /* TomodachiTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = tomodachiTests;
+			path = TomodachiTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -122,7 +122,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* tomodachi */ = {
+		13B07FAE1A68108700A75B9A /* Tomodachi */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -133,7 +133,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = tomodachi;
+			name = Tomodachi;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -141,10 +141,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				02FC59F7FCFB945D021D282F /* libPods-tomodachi.a */,
-				42671E7057C748C20A04CB60 /* libPods-tomodachi-tvOS.a */,
-				4A1C21154BC59419B7D77578 /* libPods-tomodachi-tvOSTests.a */,
-				98DB2F4F7AB2C62DF3B7220A /* libPods-tomodachiTests.a */,
+				02FC59F7FCFB945D021D282F /* libPods-Tomodachi.a */,
+				42671E7057C748C20A04CB60 /* libPods-Tomodachi-tvOS.a */,
+				4A1C21154BC59419B7D77578 /* libPods-Tomodachi-tvOSTests.a */,
+				98DB2F4F7AB2C62DF3B7220A /* libPods-TomodachiTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,14 +152,14 @@
 		307F59BAD54A667BC25CD760 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BF02243B1285D92D12857952 /* Pods-tomodachi.debug.xcconfig */,
-				23961B6457CA8DD8D6F42359 /* Pods-tomodachi.release.xcconfig */,
-				989E97735AC3FA0DFC949D40 /* Pods-tomodachi-tvOS.debug.xcconfig */,
-				1493425A0F91C4C584D35AF2 /* Pods-tomodachi-tvOS.release.xcconfig */,
-				C789498E08EEFF1E3B1CD17D /* Pods-tomodachi-tvOSTests.debug.xcconfig */,
-				BC9E9F18AAAD090D92F6A42D /* Pods-tomodachi-tvOSTests.release.xcconfig */,
-				CF0156833393475FD0709765 /* Pods-tomodachiTests.debug.xcconfig */,
-				B513D08445831BF5961C722B /* Pods-tomodachiTests.release.xcconfig */,
+				BF02243B1285D92D12857952 /* Pods-Tomodachi.debug.xcconfig */,
+				23961B6457CA8DD8D6F42359 /* Pods-Tomodachi.release.xcconfig */,
+				989E97735AC3FA0DFC949D40 /* Pods-Tomodachi-tvOS.debug.xcconfig */,
+				1493425A0F91C4C584D35AF2 /* Pods-Tomodachi-tvOS.release.xcconfig */,
+				C789498E08EEFF1E3B1CD17D /* Pods-Tomodachi-tvOSTests.debug.xcconfig */,
+				BC9E9F18AAAD090D92F6A42D /* Pods-Tomodachi-tvOSTests.release.xcconfig */,
+				CF0156833393475FD0709765 /* Pods-TomodachiTests.debug.xcconfig */,
+				B513D08445831BF5961C722B /* Pods-TomodachiTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -175,9 +175,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* tomodachi */,
+				13B07FAE1A68108700A75B9A /* Tomodachi */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* tomodachiTests */,
+				00E356EF1AD99517003FC87E /* TomodachiTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				307F59BAD54A667BC25CD760 /* Pods */,
@@ -190,10 +190,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* tomodachi.app */,
-				00E356EE1AD99517003FC87E /* tomodachiTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* tomodachi-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* tomodachi-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* Tomodachi.app */,
+				00E356EE1AD99517003FC87E /* TomodachiTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* Tomodachi-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* Tomodachi-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,9 +201,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* tomodachiTests */ = {
+		00E356ED1AD99517003FC87E /* TomodachiTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "tomodachiTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TomodachiTests" */;
 			buildPhases = (
 				9FBF9E97A410D7FFF8A7A7CD /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -215,14 +215,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = tomodachiTests;
-			productName = tomodachiTests;
-			productReference = 00E356EE1AD99517003FC87E /* tomodachiTests.xctest */;
+			name = TomodachiTests;
+			productName = TomodachiTests;
+			productReference = 00E356EE1AD99517003FC87E /* TomodachiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* tomodachi */ = {
+		13B07F861A680F5B00A75B9A /* Tomodachi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "tomodachi" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Tomodachi" */;
 			buildPhases = (
 				006C95366EE59864EA299EBD /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -235,14 +235,14 @@
 			);
 			dependencies = (
 			);
-			name = tomodachi;
-			productName = tomodachi;
-			productReference = 13B07F961A680F5B00A75B9A /* tomodachi.app */;
+			name = Tomodachi;
+			productName = Tomodachi;
+			productReference = 13B07F961A680F5B00A75B9A /* Tomodachi.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* tomodachi-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* Tomodachi-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "tomodachi-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Tomodachi-tvOS" */;
 			buildPhases = (
 				6C39D861E28C1C8FCC8BE9D4 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -255,14 +255,14 @@
 			);
 			dependencies = (
 			);
-			name = "tomodachi-tvOS";
-			productName = "tomodachi-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* tomodachi-tvOS.app */;
+			name = "Tomodachi-tvOS";
+			productName = "Tomodachi-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* Tomodachi-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* tomodachi-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* Tomodachi-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "tomodachi-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Tomodachi-tvOSTests" */;
 			buildPhases = (
 				05BF66D0F3D9A2C7903E4DEB /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -274,9 +274,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "tomodachi-tvOSTests";
-			productName = "tomodachi-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* tomodachi-tvOSTests.xctest */;
+			name = "Tomodachi-tvOSTests";
+			productName = "Tomodachi-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* Tomodachi-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -303,7 +303,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "tomodachi" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Tomodachi" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -316,10 +316,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* tomodachi */,
-				00E356ED1AD99517003FC87E /* tomodachiTests */,
-				2D02E47A1E0B4A5D006451C7 /* tomodachi-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* tomodachi-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* Tomodachi */,
+				00E356ED1AD99517003FC87E /* TomodachiTests */,
+				2D02E47A1E0B4A5D006451C7 /* Tomodachi-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* Tomodachi-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -374,7 +374,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-tomodachi-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Tomodachi-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -410,7 +410,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-tomodachi-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Tomodachi-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -446,7 +446,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-tomodachi-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Tomodachi-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -468,7 +468,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-tomodachiTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TomodachiTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -520,7 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* tomodachiTests.m in Sources */,
+				00E356F31AD99517003FC87E /* TomodachiTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,7 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* tomodachiTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* TomodachiTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,12 +555,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* tomodachi */;
+			target = 13B07F861A680F5B00A75B9A /* Tomodachi */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* tomodachi-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* Tomodachi-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -572,7 +572,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = tomodachi;
+			path = Tomodachi;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -580,14 +580,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF0156833393475FD0709765 /* Pods-tomodachiTests.debug.xcconfig */;
+			baseConfigurationReference = CF0156833393475FD0709765 /* Pods-TomodachiTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = tomodachiTests/Info.plist;
+				INFOPLIST_FILE = TomodachiTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -597,17 +597,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tomodachi.app/tomodachi";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tomodachi.app/Tomodachi";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B513D08445831BF5961C722B /* Pods-tomodachiTests.release.xcconfig */;
+			baseConfigurationReference = B513D08445831BF5961C722B /* Pods-TomodachiTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = tomodachiTests/Info.plist;
+				INFOPLIST_FILE = TomodachiTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -617,18 +617,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tomodachi.app/tomodachi";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tomodachi.app/Tomodachi";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF02243B1285D92D12857952 /* Pods-tomodachi.debug.xcconfig */;
+			baseConfigurationReference = BF02243B1285D92D12857952 /* Pods-Tomodachi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				INFOPLIST_FILE = tomodachi/Info.plist;
+				INFOPLIST_FILE = Tomodachi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -636,18 +636,18 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = tomodachi;
+				PRODUCT_NAME = Tomodachi;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23961B6457CA8DD8D6F42359 /* Pods-tomodachi.release.xcconfig */;
+			baseConfigurationReference = 23961B6457CA8DD8D6F42359 /* Pods-Tomodachi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = tomodachi/Info.plist;
+				INFOPLIST_FILE = Tomodachi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -655,14 +655,14 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = tomodachi;
+				PRODUCT_NAME = Tomodachi;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 989E97735AC3FA0DFC949D40 /* Pods-tomodachi-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 989E97735AC3FA0DFC949D40 /* Pods-Tomodachi-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -673,14 +673,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "tomodachi-tvOS/Info.plist";
+				INFOPLIST_FILE = "Tomodachi-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.tomodachi-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Tomodachi-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -690,7 +690,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1493425A0F91C4C584D35AF2 /* Pods-tomodachi-tvOS.release.xcconfig */;
+			baseConfigurationReference = 1493425A0F91C4C584D35AF2 /* Pods-Tomodachi-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -701,14 +701,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "tomodachi-tvOS/Info.plist";
+				INFOPLIST_FILE = "Tomodachi-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.tomodachi-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Tomodachi-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -718,7 +718,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C789498E08EEFF1E3B1CD17D /* Pods-tomodachi-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = C789498E08EEFF1E3B1CD17D /* Pods-Tomodachi-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -728,24 +728,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "tomodachi-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Tomodachi-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.tomodachi-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Tomodachi-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tomodachi-tvOS.app/tomodachi-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tomodachi-tvOS.app/Tomodachi-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC9E9F18AAAD090D92F6A42D /* Pods-tomodachi-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = BC9E9F18AAAD090D92F6A42D /* Pods-Tomodachi-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -755,17 +755,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "tomodachi-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Tomodachi-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.tomodachi-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Tomodachi-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tomodachi-tvOS.app/tomodachi-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tomodachi-tvOS.app/Tomodachi-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -872,7 +872,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "tomodachiTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TomodachiTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -881,7 +881,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "tomodachi" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Tomodachi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -890,7 +890,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "tomodachi-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Tomodachi-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -899,7 +899,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "tomodachi-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Tomodachi-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -908,7 +908,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "tomodachi" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Tomodachi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
