@@ -3,7 +3,7 @@ import { StatusBar, View, ImageBackground, Text } from "react-native";
 
 //styles
 import styles from "./styles.js";
-import Background from "./images/background.png";
+import Background from "../images/background.png";
 
 const App = () => {
   return (
