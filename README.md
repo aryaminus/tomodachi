@@ -2,7 +2,7 @@
 
 > Alpha release
 
-![UI Screenshot](https://i.imgur.com/oG33oOy.png)
+![UI GIF](https://i.imgur.com/iwWOtYs.gif)
 
 ## About
 
