@@ -76,12 +76,13 @@ function App() {
         <>
           <S.UserDetail>
             <S.Avatar src={avatar} />
-            <h2>{user.displayName}</h2>
+            <S.UserName>{user.displayName}</S.UserName>
           </S.UserDetail>
           <S.ContactsContainer>
             <S.ContactList>
-              <h2>Contact List</h2>
-
+              <S.Bar>
+                <S.Title> Contact List </S.Title>
+              </S.Bar>
               {contactList !== [] &&
                 contactList.map(function(c) {
                   var contactStyles = {

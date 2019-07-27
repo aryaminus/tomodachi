@@ -29,12 +29,9 @@ export const FacebookContainer = styled.div({
 export const UserDetail = styled.div({
   display: "flex",
   flexDirection: "row",
-  // alignItems: "center",
-  // justifyContent: "flex-end",
   position: "absolute",
   right: "2%",
   top: "2%"
-  // transform: "translate(-50%, -50%)"
 });
 
 export const Avatar = styled.img({
@@ -43,27 +40,54 @@ export const Avatar = styled.img({
   height: 50,
   maxHeight: 50,
   maxWidth: 50,
-  marginTop: 10,
+  marginTop: 8,
   marginRight: 10,
   minWidth: 50,
   minHeight: 50
 });
 
+export const UserName = styled.div({
+  fontWeight: "bold",
+  fontSize: "22px",
+  color: "#bbdefb",
+  alignSelf: "center"
+});
+
 export const ContactsContainer = styled.div({
   display: "flex",
   flexDirection: "row",
-  // alignItems: "center",
-  // justifyContent: "center",
+  transition: "all 100ms linear",
+  padding: "25px 10px",
+  backgroundColor: "#758dd245",
+  borderRadius: "11px",
   position: "absolute",
-  left: "5%",
-  top: "10%"
-  // transform: "translate(-50%, -50%)"
+  left: "50%",
+  top: "50%",
+  transform: "translate(-50%, -50%)"
+});
+
+export const Bar = styled.div({
+  height: 56,
+  padding: 15,
+  minWidth: 155
+});
+
+export const Title = styled.div({
+  fontSize: "24px",
+  color: "#223448"
 });
 
 export const Contact = styled.div({
   margin: "0 0 1rem 0",
   padding: 3,
-  textAlign: "center"
+  minWidth: 180,
+  textAlign: "left",
+  "&:hover": {
+    // background: "#fff",
+    transform: "scale(1.02)",
+    cursor: "pointer",
+    userSelect: "none !important"
+  }
 });
 
 export const ContactList = styled.div({
