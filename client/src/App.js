@@ -38,7 +38,7 @@ function App() {
       mode: "cors",
       cache: "default"
     };
-    fetch("/auth/facebook", options).then(r => {
+    fetch("/api/auth/facebook", options).then(r => {
       const token = r.headers.get("x-auth-token");
       r.json().then(user => {
         if (token) {

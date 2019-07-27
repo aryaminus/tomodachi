@@ -47,21 +47,22 @@ const App = () => {
         mode: "cors",
         cache: "default"
       };
-      fetch("https://tomodachi977.herokuapp.com/auth/facebook", options).then(
-        r => {
-          const token = r.headers.get("x-auth-token");
-          r.json().then(user => {
-            if (token) {
-              console.log(user.photos[0].value);
-              setAuthenticated(true);
-              setAvatar(user.photos[0].value);
-              setUser(user);
-              setToken(token);
-              getContact(user.id);
-            }
-          });
-        }
-      );
+      fetch(
+        "https://tomodachi977.herokuapp.com/api/auth/facebook",
+        options
+      ).then(r => {
+        const token = r.headers.get("x-auth-token");
+        r.json().then(user => {
+          if (token) {
+            console.log(user.photos[0].value);
+            setAuthenticated(true);
+            setAvatar(user.photos[0].value);
+            setUser(user);
+            setToken(token);
+            getContact(user.id);
+          }
+        });
+      });
     } catch (err) {
       LoginManager.logOut();
       alert(err);

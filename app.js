@@ -77,7 +77,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // });
 
 app.post(
-  "/auth/facebook",
+  "/api/auth/facebook",
   passport.authenticate("facebook-token", { session: false }),
   function(req, res, next) {
     if (!req.user) {
