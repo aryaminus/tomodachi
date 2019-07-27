@@ -52,8 +52,8 @@ function ContactInfo({ person, getContact, sethideContact }) {
             customStyles={{
               background: "#bbdefb",
               borderRadius: 15,
-              width: 320,
-              height: 300
+              width: 325,
+              height: 350
             }}
           >
             <div>Edit Contact</div>
