@@ -31,11 +31,11 @@ function ContactInfo({ person, getContact, sethideContact }) {
             <S.Name>{person.firstname}</S.Name>
             <S.Phone>
               <p style={{ color: "#bbdefb", marginRight: 6 }}>Phone: </p>{" "}
-              <p>{person.phone}</p>
+              <S.href href={"tel:" + person.phone}>{person.phone}</S.href>
             </S.Phone>
             <S.Email>
               <p style={{ color: "#bbdefb", marginRight: 6 }}>Email: </p>{" "}
-              <p>{person.email}</p>
+              <S.href href={"mailto:" + person.email}>{person.email}</S.href>
             </S.Email>
           </S.Info>
           <S.Buttons>

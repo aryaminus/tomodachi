@@ -22,6 +22,18 @@ export const Email = styled.div({
   flexDirection: "row"
 });
 
+export const href = styled.a({
+  textDecoration: "none",
+  color: "#111b27",
+  borderBottom: "1px solid transparent",
+  transition: "all 100ms linear",
+  alignSelf: "center",
+  fontSize: 18,
+  "&:hover": {
+    borderBottom: "1px solid white"
+  }
+});
+
 export const Buttons = styled.div({
   display: "flex",
   flexDirection: "row",
