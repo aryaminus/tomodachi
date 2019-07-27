@@ -18,6 +18,7 @@ import ContactInfo from "./components/ContactInfo";
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
   const [user, setUser] = useState({});
+  const [avatar, setAvatar] = useState("");
   const [token, setToken] = useState("");
   const [contactList, setContactList] = useState([]);
 
@@ -41,8 +42,9 @@ function App() {
       const token = r.headers.get("x-auth-token");
       r.json().then(user => {
         if (token) {
-          console.log(user);
+          console.log(user.photos[0].value);
           setAuthenticated(true);
+          setAvatar(user.photos[0].value);
           setUser(user);
           setToken(token);
           getContact(user.id);
@@ -72,10 +74,15 @@ function App() {
         </S.FacebookContainer>
       ) : (
         <>
+          <S.UserDetail>
+            <S.Avatar src={avatar} />
+            <S.UserName>{user.displayName}</S.UserName>
+          </S.UserDetail>
           <S.ContactsContainer>
             <S.ContactList>
-              <h2>Contact List</h2>
-
+              <S.Bar>
+                <S.Title> Contact List </S.Title>
+              </S.Bar>
               {contactList !== [] &&
                 contactList.map(function(c) {
                   var contactStyles = {
@@ -128,11 +135,11 @@ function App() {
             customStyles={{
               background: "#bbdefb",
               borderRadius: 15,
-              width: 320,
-              height: 300
+              width: 325,
+              height: 350
             }}
           >
-            <div>Add Contact</div>
+            <S.AddContactTitle>Add Contact</S.AddContactTitle>
             <AddContact
               user_id={user.id}
               getContact={getContact}

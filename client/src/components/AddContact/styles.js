@@ -27,5 +27,11 @@ export const Button = styled.button({
   padding: 10,
   width: "100%",
   transition: "all 150ms linear",
-  boxShadow: "0px 1px 1px rgba(0, 0, 0, 0.2)"
+  boxShadow: "0px 1px 1px rgba(0, 0, 0, 0.2)",
+  "&:hover": {
+    background: "#73ba8c",
+    transform: "scale(1.02)",
+    cursor: "pointer",
+    userSelect: "none !important"
+  }
 });

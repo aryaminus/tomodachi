@@ -18,16 +18,16 @@ function EditContact({ person, getContact, showEditModal }) {
   const checkFormErrors = async (firstName, lastName, email, phone) => {
     if (firstName.length < 2) {
       setOutput(false);
-      setError("Name needs to be at least 2 characters.");
+      setError("First Name needs to be at least 2 characters.");
     } else if (lastName.length < 2) {
       setOutput(false);
-      setError("Name needs to be at least 2 characters.");
+      setError("Last Name needs to be at least 2 characters.");
     } else if (email.length < 10) {
       setOutput(false);
       setError("Email needs to be at least 10 characters.");
     } else if (phone.length < 10) {
       setOutput(false);
-      setError("Subject needs to be at least 10 characters.");
+      setError("Phone needs to be at least 10 characters.");
     } else {
       setOutput(true);
     }
@@ -98,7 +98,7 @@ function EditContact({ person, getContact, showEditModal }) {
         </S.Button>
       </center>
 
-      {/* {server == 1 ? (
+      {server == 1 ? (
         <center>
           <p>Message sent sucessfully!</p>
         </center>
@@ -107,7 +107,7 @@ function EditContact({ person, getContact, showEditModal }) {
         <center>
           <p>{error}</p>
         </center>
-      )} */}
+      )}
     </S.Content>
   );
 }

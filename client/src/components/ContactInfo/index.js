@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 //styles
 import * as S from "./styles";
+import { FaTrash, FaEdit } from "react-icons/fa";
 
 // custom components
 import axios from "axios";
@@ -27,16 +28,22 @@ function ContactInfo({ person, getContact, sethideContact }) {
       {person ? (
         <S.Content>
           <S.Info>
-            <h3>{person.firstname}</h3>
-            <p>Phone: {person.phone}</p>
-            <p>Email: {person.email}</p>
+            <S.Name>{person.firstname}</S.Name>
+            <S.Phone>
+              <p style={{ color: "#bbdefb", marginRight: 6 }}>Phone: </p>{" "}
+              <S.href href={"tel:" + person.phone}>{person.phone}</S.href>
+            </S.Phone>
+            <S.Email>
+              <p style={{ color: "#bbdefb", marginRight: 6 }}>Email: </p>{" "}
+              <S.href href={"mailto:" + person.email}>{person.email}</S.href>
+            </S.Email>
           </S.Info>
           <S.Buttons>
             <S.Button onClick={() => showEditModal(true)}>
-              <span>Edit</span>
+              <FaEdit />
             </S.Button>
             <S.Button onClick={dalete}>
-              <span>Delete</span>
+              <FaTrash />
             </S.Button>
           </S.Buttons>
           <Rodal
@@ -45,8 +52,8 @@ function ContactInfo({ person, getContact, sethideContact }) {
             customStyles={{
               background: "#bbdefb",
               borderRadius: 15,
-              width: 320,
-              height: 300
+              width: 325,
+              height: 350
             }}
           >
             <div>Edit Contact</div>

@@ -20,6 +20,45 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Tomodachi</title>
+
+    <style type="text/css">
+      html {
+        box-sizing: border-box;
+        line-height: 1.15;
+        overflow-x: hidden;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      :root {
+        -moz-tab-size: 4;
+        tab-size: 4;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+      }
+      body {
+        min-height: 100vh;
+      }
+      * {
+        font-family: "PT Sans", sans-serif;
+      }
+      /**
+       * This will hide the focus indicator if the element receives focus via the mouse,
+       * but it will still show up on keyboard focus.
+       */
+      .js-focus-visible :focus:not(.focus-visible) {
+        outline: none;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
