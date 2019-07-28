@@ -5241,7 +5241,7 @@ prompts@^2.0.1:
     kleur "^3.0.2"
     sisteransi "^1.0.0"
 
-prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -5330,6 +5330,13 @@ react-lifecycles-compat@^3, react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-native-animatable@^1.3.1:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.3.2.tgz#4783ee1a73dc98815aef234ce6b819f80bfe7d80"
+  integrity sha512-rmah3KQ63ft8DxkzFUwJSuZeq+oSYwldoGF4DTOR5WM2WR5wiWLgBAtrAHlI3Di3by323uOR21s+MlqPcHz2Kw==
+  dependencies:
+    prop-types "^15.5.10"
+
 react-native-dismiss-keyboard@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-native-dismiss-keyboard/-/react-native-dismiss-keyboard-1.0.0.tgz#32886242b3f2317e121f3aeb9b0a585e2b879b49"
@@ -5353,6 +5360,14 @@ react-native-fbsdk@^1.0.0-rc.4:
   version "1.0.0-rc.5"
   resolved "https://registry.yarnpkg.com/react-native-fbsdk/-/react-native-fbsdk-1.0.0-rc.5.tgz#bc60965e4b9b60dbe408a79e8cbea1a3fee1609e"
   integrity sha512-v34XF7MtsC3Qtt4OmSoIorp8/g6EPiycS9WOVnd1L5uckIwJeD+rSmpBucHKaCV3USGGqWKo2dDew+6BgUgkSQ==
+
+react-native-modal@^11.2.0:
+  version "11.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-modal/-/react-native-modal-11.2.0.tgz#15cec0596a9088772947384fd29a1326692af0a5"
+  integrity sha512-TqgLK3gKsp2/JA+59TIkdACsR4UUe8OEQZDatpGnL462YCf68YPt4ei68CI8Gn8HYkvjeR+uz5Cjb9v4zpIWLQ==
+  dependencies:
+    prop-types "^15.6.2"
+    react-native-animatable "^1.3.1"
 
 react-native-router-flux@^4.0.6:
   version "4.0.6"

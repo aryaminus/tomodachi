@@ -33,5 +33,35 @@ export default StyleSheet.create({
     width: 40,
     height: 40,
     alignSelf: "center"
+  },
+  modalContainer: {
+    backgroundColor: "#fff",
+    margin: 10,
+    shadowColor: "#777",
+    borderRadius: 12,
+    elevation: 2,
+    shadowOpacity: 0.16,
+    shadowRadius: 2,
+    shadowOffset: {
+      height: 1,
+      width: 0
+    }
+  },
+  contactName: {
+    color: "#000",
+    margin: 3,
+    fontSize: 17,
+    paddingTop: 20
+  },
+  rows: {
+    flexDirection: "row"
+  },
+  field: {
+    color: "#bbdefb",
+    margin: 6
+  },
+  info: {
+    color: "#888",
+    margin: 6
   }
 });
