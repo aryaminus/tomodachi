@@ -42,7 +42,6 @@ function App() {
       const token = r.headers.get("x-auth-token");
       r.json().then(user => {
         if (token) {
-          console.log(user.photos[0].value);
           setAuthenticated(true);
           setAvatar(user.photos[0].value);
           setUser(user);
