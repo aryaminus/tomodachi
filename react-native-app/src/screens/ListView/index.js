@@ -13,6 +13,7 @@ import {
 
 // custom components
 import Modal from "react-native-modal";
+import { Actions } from "react-native-router-flux";
 import { FloatingAction } from "react-native-floating-action";
 
 // styles
@@ -25,6 +26,15 @@ import ListItem from "../../components/ListItem";
 function ListView({ avatar, user, token, contactList }) {
   const [isVisibleModal, setVisibleModal] = useState(false);
   const [modalItem, setmodalItem] = useState({});
+
+  const actions = [
+    {
+      text: "Add Contact",
+      icon: require("../../images/add.png"),
+      name: "add_contact",
+      position: 1
+    }
+  ];
 
   return (
     <View style={styles.bg}>
@@ -96,13 +106,14 @@ function ListView({ avatar, user, token, contactList }) {
                   </View>
                   <View style={styles.buttons}>
                     <TouchableOpacity
-                      onPress={() =>
+                      onPress={() => {
+                        setVisibleModal(false);
                         Actions.addNedit({
                           edit: true,
                           item: modalItem,
                           person: user
-                        })
-                      }
+                        });
+                      }}
                       style={styles.icons}
                     >
                       <Icon
@@ -134,15 +145,14 @@ function ListView({ avatar, user, token, contactList }) {
           </Modal>
         </ScrollView>
         <FloatingAction
-          onPressMain
-          // actions={actions}
-          onPressMain={() =>
+          actions={actions}
+          onPressItem={name => {
             Actions.addNedit({
               edit: false,
               item: null,
               person: user
-            })
-          }
+            });
+          }}
         />
       </View>
     </View>

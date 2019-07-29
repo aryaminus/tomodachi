@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { View, ScrollView, Text, TextInput } from "react-native";
+import { View, ScrollView, Text, TextInput, Image } from "react-native";
 
 // custom components
 import { Actions } from "react-native-router-flux";
+import axios from "axios";
 
 // styles
 import styles from "./styles.js";
@@ -76,6 +77,7 @@ function Form({ edit, item, person }) {
               <View style={styles.header}>
                 <Icon
                   name="ios-close"
+                  color="#fff"
                   size={30}
                   onPress={() => Actions.pop()}
                 />
@@ -84,15 +86,22 @@ function Form({ edit, item, person }) {
                     {edit ? "Edit Contact" : "Add Contact"}
                   </Text>
                 </View>
-                <Icon name="ios-send" size={25} onPress={update} />
+                <Icon name="ios-send" color="#fff" size={25} onPress={update} />
               </View>
             </View>
           </View>
 
           <View style={styles.formContainer}>
+            <Image
+              style={styles.defaultImage}
+              source={{
+                uri: "https://i.imgur.com/VqKUGc3.png"
+              }}
+            />
+
             <View style={styles.info}>
               <Text style={styles.icon}>
-                <Icon style={styles.icon} name="ios-pin" size={25} />
+                <Icon name="ios-man" size={25} />
               </Text>
               <TextInput
                 style={styles.inputBox}
@@ -109,7 +118,7 @@ function Form({ edit, item, person }) {
 
             <View style={styles.info}>
               <Text style={styles.icon}>
-                <Icon name="ios-journal" size={25} />
+                <Icon name="ios-man" size={25} />
               </Text>
               <TextInput
                 style={styles.inputBox}
@@ -126,7 +135,7 @@ function Form({ edit, item, person }) {
 
             <View style={styles.info}>
               <Text style={styles.icon}>
-                <Icon name="ios-journal" size={25} />
+                <Icon name="ios-call" size={25} />
               </Text>
               <TextInput
                 style={styles.inputBox}
@@ -143,7 +152,7 @@ function Form({ edit, item, person }) {
 
             <View style={styles.info}>
               <Text style={styles.icon}>
-                <Icon name="ios-journal" size={25} />
+                <Icon name="ios-mail" size={25} />
               </Text>
               <TextInput
                 style={styles.inputBox}

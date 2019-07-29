@@ -8,21 +8,24 @@ export default StyleSheet.create({
     flex: 1,
     resizeMode: "cover",
     width: DIMENSION_WIDTH,
-    height: DIMENSION_HEIGHT
+    height: DIMENSION_HEIGHT,
+    backgroundColor: "#558fd5"
   },
   scrollViewContainer: { marginHorizontal: 0 },
   navbar: {
     flex: 1,
     width: DIMENSION_WIDTH,
-    height: 50
+    height: 30
   },
   mapContainer: {
     flex: 1
   },
   containerHeader: {
-    height: 89,
+    paddingTop: 60,
+    backgroundColor: "#3672B9",
     position: "absolute",
-    top: 0,
+    alignItems: "center",
+    top: "30%",
     width: "100%",
     zIndex: 100
   },
@@ -37,8 +40,8 @@ export default StyleSheet.create({
     width: "100%"
   },
   headerTitle: {
-    color: colors.black,
-    fontSize: 18,
+    color: "#fff",
+    fontSize: 22,
     paddingHorizontal: 8,
     marginTop: 2,
     textAlign: "center",
@@ -50,7 +53,15 @@ export default StyleSheet.create({
     alignItems: "center"
   },
   formContainer: {
-    alignItems: "center"
+    alignItems: "center",
+    marginTop: "12%"
+  },
+  defaultImage: {
+    borderRadius: 25,
+    width: 200,
+    height: 200,
+    justifyContent: "center",
+    alignSelf: "center"
   },
   info: {
     paddingVertical: 8,
