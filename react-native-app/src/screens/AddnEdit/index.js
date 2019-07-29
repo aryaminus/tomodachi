@@ -9,7 +9,7 @@ import axios from "axios";
 import styles from "./styles.js";
 import Icon from "react-native-vector-icons/Ionicons";
 
-function Form({ edit, item, person }) {
+function Form({ edit, item, person, getContact }) {
   const [firstName, setFirstName] = useState(edit ? item.firstname : ``);
   const [lastName, setLastName] = useState(edit ? item.lastname : ``);
   const [email, setEmail] = useState(edit ? item.email : ``);
@@ -39,30 +39,35 @@ function Form({ edit, item, person }) {
   const update = async () => {
     checkFormErrors(firstName, lastName, email, phone);
     if (output === true) {
-      const user_id = person.user_id;
-      const id = person.id;
-      const newContact = { user_id, firstName, lastName, email, phone };
       if (edit) {
+        const user_id = item.user_id;
+        const id = item.id;
+        const newContact = { user_id, firstName, lastName, email, phone };
         await axios
           .put(
-            `/api/contacts/update/${id}?user_id=${user_id}&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`,
+            `https://tomodachi977.herokuapp.com/api/contacts/update/${id}?user_id=${user_id}&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`,
             newContact
           )
           .then(result => {
             console.log(result);
-            // getContact(user_id);
+            getContact(person.user_id);
             setServer(1);
+            Actions.pop();
           });
       } else {
+        const user_id = person.user_id;
+        const newContact = { user_id, firstName, lastName, email, phone };
+        console.log(newContact);
         await axios
           .post(
-            `/api/contacts/add?user_id=${user_id}&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`,
+            `https://tomodachi977.herokuapp.com/api/contacts/add?user_id=${user_id}&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`,
             newContact
           )
           .then(result => {
             console.log(result);
-            // getContact(user_id);
+            getContact(person.user_id);
             setServer(1);
+            Actions.pop();
           });
       }
     }

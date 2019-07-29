@@ -12,6 +12,7 @@ import {
 } from "react-native";
 
 // custom components
+import axios from "axios";
 import Modal from "react-native-modal";
 import { Actions } from "react-native-router-flux";
 import { FloatingAction } from "react-native-floating-action";
@@ -24,6 +25,9 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import ListItem from "../../components/ListItem";
 
 function ListView({ avatar, user, token, contactList }) {
+  console.log(user);
+  const [contacts, setContacts] = useState(contactList);
+
   const [isVisibleModal, setVisibleModal] = useState(false);
   const [modalItem, setmodalItem] = useState({});
 
@@ -35,6 +39,25 @@ function ListView({ avatar, user, token, contactList }) {
       position: 1
     }
   ];
+
+  const dalete = async id => {
+    await axios
+      .delete(`https://tomodachi977.herokuapp.com/api/contacts/delete/${id}`)
+      .then(result => {
+        console.log(result);
+        getContact(user.user_id);
+        setVisibleModal(false);
+      });
+  };
+
+  const getContact = async user_id => {
+    console.log(user_id);
+    await axios
+      .get(`https://tomodachi977.herokuapp.com/api/contacts/get/${user_id}`)
+      .then(result => {
+        setContacts(result.data.data);
+      });
+  };
 
   return (
     <View style={styles.bg}>
@@ -57,7 +80,7 @@ function ListView({ avatar, user, token, contactList }) {
           </View>
 
           <FlatList
-            data={contactList}
+            data={contacts}
             keyExtractor={(item, index) => index.toString()}
             renderItem={({ item }) => (
               <TouchableOpacity
@@ -111,26 +134,19 @@ function ListView({ avatar, user, token, contactList }) {
                         Actions.addNedit({
                           edit: true,
                           item: modalItem,
-                          person: user
+                          person: user,
+                          getContact: getContact
                         });
                       }}
                       style={styles.icons}
                     >
-                      <Icon
-                        name="edit"
-                        // color={this.props.iconColor1}
-                        size={15}
-                      />
+                      <Icon name="edit" size={15} />
                     </TouchableOpacity>
                     <TouchableOpacity
-                      // onPress={() => this.props.onClicked2()}
+                      onPress={() => dalete(modalItem.id)}
                       style={styles.icons}
                     >
-                      <Icon
-                        name="trash"
-                        // color={this.props.iconColor2}
-                        size={15}
-                      />
+                      <Icon name="trash" size={15} />
                     </TouchableOpacity>
                   </View>
                 </View>
@@ -150,7 +166,8 @@ function ListView({ avatar, user, token, contactList }) {
             Actions.addNedit({
               edit: false,
               item: null,
-              person: user
+              person: user,
+              getContact: getContact
             });
           }}
         />
