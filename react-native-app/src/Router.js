@@ -6,7 +6,7 @@ import { Scene, Router, Modal } from "react-native-router-flux";
 // import WelcomeScreen from './screens/WelcomeScreen';
 import Fblogin from "./screens/Fblogin";
 import ListView from "./screens/ListView";
-import Detail from "./screens/Detail";
+import AddnEdit from "./screens/AddnEdit";
 
 const RouterComponent = () => (
   <Router>
@@ -18,7 +18,7 @@ const RouterComponent = () => (
         component={ListView}
         panHandlers={null}
       />
-      <Scene key="detail" hideNavBar component={Detail} panHandlers={null} />
+      <Scene key="addNedit" hideNavBar component={AddnEdit} panHandlers={null} />
     </Modal>
   </Router>
 );

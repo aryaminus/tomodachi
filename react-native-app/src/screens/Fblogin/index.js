@@ -15,7 +15,9 @@ import FBLoginButton from "../../components/FBLoginButton";
 
 const Fblogin = () => {
   const [isAuthenticated, setAuthenticated] = useState(false);
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({
+    user_id: "10205411179355213"
+  });
   const [avatar, setAvatar] = useState(
     "https://graph.facebook.com/v2.6/10205411179355213/picture?type=large"
   );
