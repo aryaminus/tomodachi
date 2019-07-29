@@ -13,6 +13,7 @@ import {
 
 // custom components
 import Modal from "react-native-modal";
+import { FloatingAction } from "react-native-floating-action";
 
 // styles
 import styles from "./styles.js";
@@ -95,7 +96,13 @@ function ListView({ avatar, user, token, contactList }) {
                   </View>
                   <View style={styles.buttons}>
                     <TouchableOpacity
-                      // onPress={() => this.props.onClicked1()}
+                      onPress={() =>
+                        Actions.addNedit({
+                          edit: true,
+                          item: modalItem,
+                          person: user
+                        })
+                      }
                       style={styles.icons}
                     >
                       <Icon
@@ -126,6 +133,17 @@ function ListView({ avatar, user, token, contactList }) {
             </View>
           </Modal>
         </ScrollView>
+        <FloatingAction
+          onPressMain
+          // actions={actions}
+          onPressMain={() =>
+            Actions.addNedit({
+              edit: false,
+              item: null,
+              person: user
+            })
+          }
+        />
       </View>
     </View>
   );

@@ -5361,6 +5361,11 @@ react-native-fbsdk@^1.0.0-rc.4:
   resolved "https://registry.yarnpkg.com/react-native-fbsdk/-/react-native-fbsdk-1.0.0-rc.5.tgz#bc60965e4b9b60dbe408a79e8cbea1a3fee1609e"
   integrity sha512-v34XF7MtsC3Qtt4OmSoIorp8/g6EPiycS9WOVnd1L5uckIwJeD+rSmpBucHKaCV3USGGqWKo2dDew+6BgUgkSQ==
 
+react-native-floating-action@^1.17.0:
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/react-native-floating-action/-/react-native-floating-action-1.17.0.tgz#abf4828c4dc726c662b0327e4900a72825830971"
+  integrity sha512-V8xyooeA3EdZfOg5yLmCJM2GCHv8rpPed/QwYAIEkoX8U0KyG9mNfBUJK2/ZzW3DT+pqeoTbzLq6aZzv1TpDRA==
+
 react-native-modal@^11.2.0:
   version "11.2.0"
   resolved "https://registry.yarnpkg.com/react-native-modal/-/react-native-modal-11.2.0.tgz#15cec0596a9088772947384fd29a1326692af0a5"
