@@ -25,7 +25,6 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import ListItem from "../../components/ListItem";
 
 function ListView({ avatar, user, token, contactList }) {
-  console.log(user);
   const [contacts, setContacts] = useState(contactList);
 
   const [isVisibleModal, setVisibleModal] = useState(false);
