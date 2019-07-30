@@ -13,7 +13,7 @@ This is a dummy application built using Node, React and Postgres with addition o
 - [About](#about)
 - [Installation](#installation)
 - [Contributing](#contributing)
-- [Links and References](#links-and-references)
+- [Links and References](#references)
 - [Author](#author)
 - [Licensing](#licensing)
 
