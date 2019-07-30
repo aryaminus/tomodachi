@@ -32,7 +32,7 @@ $ cd tomodachi
 $ yarn && cd client && yarn && cd ../react-native-app && yarn && cd ..
 ```
 
-### For React.js on local Node.js
+#### For React.js on local Node.js
 
 **Open in development mode:**
 
@@ -46,11 +46,12 @@ $ yarn dev
 $ NODE_ENV=production yarn dev:server
 ```
 
-### For React-Native
+#### For React-Native
 
 **Start server**
 
 ```
+$ cd react-native-app
 $ yarn start
 ```
 
