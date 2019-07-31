@@ -38,11 +38,11 @@ function Form({ edit, item, person, getContact }) {
 
   const update = async () => {
     checkFormErrors(firstName, lastName, email, phone);
+    const user_id = edit ? item.user_id : person.id;
+    const id = edit ? item.id : null;
+    const newContact = { user_id, firstName, lastName, email, phone };
     if (output === true) {
       if (edit) {
-        const user_id = item.user_id;
-        const id = item.id;
-        const newContact = { user_id, firstName, lastName, email, phone };
         await axios
           .put(
             `https://tomodachi977.herokuapp.com/api/contacts/update/${id}?user_id=${user_id}&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`,
@@ -50,14 +50,11 @@ function Form({ edit, item, person, getContact }) {
           )
           .then(result => {
             console.log(result);
-            getContact(person.user_id);
+            getContact(user_id);
             setServer(1);
             Actions.pop();
           });
       } else {
-        const user_id = person.user_id;
-        const newContact = { user_id, firstName, lastName, email, phone };
-        console.log(newContact);
         await axios
           .post(
             `https://tomodachi977.herokuapp.com/api/contacts/add?user_id=${user_id}&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`,
@@ -65,7 +62,7 @@ function Form({ edit, item, person, getContact }) {
           )
           .then(result => {
             console.log(result);
-            getContact(person.user_id);
+            getContact(user_id);
             setServer(1);
             Actions.pop();
           });

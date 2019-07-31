@@ -43,17 +43,15 @@ passport.use(
         if (config.use_database) {
           // if sets to true
           client.query(
-            "SELECT * from users where user_id=" + profile.id,
+            "SELECT * from users where user_id = ?",
+            [profile.id],
             (err, rows) => {
               if (err) throw err;
               if (rows && rows.rowCount === 0) {
                 console.log("There is no such user, adding now");
                 client.query(
-                  "INSERT into users(user_id,user_name) VALUES('" +
-                    profile.id +
-                    "','" +
-                    profile.displayName +
-                    "')"
+                  "INSERT into users(user_id,user_name) VALUES(?, ?)",
+                  [profile.id, profile.displayName]
                 );
               } else {
                 console.log("User already exists in database");
@@ -94,7 +92,8 @@ app.post(
 
 app.get("/api/contacts/get/:id", (req, res) => {
   client.query(
-    "SELECT * from contacts where user_id=" + req.params.id,
+    "SELECT * from contacts where user_id = ?",
+    [req.params.id],
     (err, rows) => {
       if (err) throw err;
       if (rows) {
@@ -114,17 +113,14 @@ app.post("/api/contacts/add", (req, res) => {
   client.query("SELECT * from contacts", (err, rows) => {
     if (err) throw err;
     client.query(
-      "INSERT into contacts(user_id,firstName, lastName, email, phone) VALUES('" +
-        req.body.user_id +
-        "','" +
-        req.body.firstName +
-        "','" +
-        req.body.lastName +
-        "','" +
-        req.body.email +
-        "','" +
-        req.body.phone +
-        "')"
+      "INSERT into contacts(user_id,firstName, lastName, email, phone) VALUES(?, ?, ?, ?, ?)",
+      [
+        req.body.user_id,
+        req.body.firstName,
+        req.body.lastName,
+        req.body.email,
+        req.body.phone
+      ]
     );
     return res.json({
       data: "Field Added"
@@ -135,7 +131,7 @@ app.post("/api/contacts/add", (req, res) => {
 app.delete("/api/contacts/delete/:id", (req, res) => {
   client.query("SELECT * from contacts", (err, rows) => {
     if (err) throw err;
-    client.query("DELETE FROM contacts WHERE id=" + req.params.id);
+    client.query("DELETE FROM contacts WHERE id = ?", [req.params.id]);
     return res.json({
       data: "Field Deleted"
     });
@@ -145,12 +141,10 @@ app.delete("/api/contacts/delete/:id", (req, res) => {
 app.get("/api/contacts/edit/:id", (req, res) => {
   client.query("SELECT * from contacts", (err, rows) => {
     if (err) throw err;
-    client.query(
-      "SELECT * FROM contacts WHERE user_id=" +
-        req.params.user_id +
-        " AND id=" +
-        req.params.id
-    );
+    client.query("SELECT * FROM contacts WHERE user_id = ? AND id = ?", [
+      req.params.user_id,
+      req.params.id
+    ]);
     return res.json({
       data: "Field Deleted"
     });
@@ -161,11 +155,14 @@ app.put("/api/contacts/update/:id", (req, res) => {
   client.query("SELECT * from contacts", (err, rows) => {
     if (err) throw err;
     client.query(
-      `UPDATE contacts SET firstname = '${req.query.firstName}', lastname = '${
-        req.query.lastName
-      }', email = '${req.query.email}', phone = '${
-        req.query.phone
-      }' WHERE id = ${req.params.id}`
+      "UPDATE contacts SET firstname = ?, lastname = ?, email = ?, phone = ? WHERE id = ?",
+      [
+        req.query.firstName,
+        req.query.lastName,
+        req.query.email,
+        req.query.phone,
+        req.params.id
+      ]
     );
     return res.json({
       data: "Field Updated"

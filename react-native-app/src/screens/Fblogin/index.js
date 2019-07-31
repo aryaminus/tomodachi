@@ -38,7 +38,7 @@ const Fblogin = () => {
         throw "Something went wrong obtaining the users access token";
       }
 
-      console.log(data);
+      // console.log(data);
       const tokenBlob = new Blob(
         [
           JSON.stringify({ access_token: data.accessToken.toString() }, null, 2)
