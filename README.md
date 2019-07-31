@@ -32,7 +32,7 @@ $ cd tomodachi
 $ yarn && cd client && yarn && cd ../react-native-app && yarn && cd ..
 ```
 
-#### For React.js on local Node.js
+## React JS
 
 **Open in development mode:**
 
@@ -46,7 +46,7 @@ $ yarn dev
 $ NODE_ENV=production yarn dev:server
 ```
 
-#### For React-Native
+## React-Native
 
 **Start server**
 
@@ -75,6 +75,7 @@ $ react-native run-android
 - <a href="https://github.com/alien35/social-auth-example" target="_blank">Usage of Passport for Facebook Login after react callback</a>
 - <a href="https://www.wlaurance.com/2018/09/how-to-install-postgresql-for-mac-for-node/" target="_blank">Setting up Postgresql for Mac</a>
 - <a href="https://datazenit.com/heroku-data-explorer.html?tp=hde#/" target="_blank">Heroku Data Explorer</a>
+- <a href="https://blog.hailstone.io/how-to-prevent-sql-injection-nodejs/" target="_blank">SQL Injection Protection</a>
 
 ## Author
 
