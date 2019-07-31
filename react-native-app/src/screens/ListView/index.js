@@ -44,12 +44,13 @@ function ListView({ avatar, user, token, contactList }) {
       .delete(`https://tomodachi977.herokuapp.com/api/contacts/delete/${id}`)
       .then(result => {
         console.log(result);
-        getContact(user.user_id);
+        getContact(user.id);
         setVisibleModal(false);
       });
   };
 
   const getContact = async user_id => {
+    // console.log("here");
     console.log(user_id);
     await axios
       .get(`https://tomodachi977.herokuapp.com/api/contacts/get/${user_id}`)

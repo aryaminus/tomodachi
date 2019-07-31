@@ -6,7 +6,6 @@ import { Text, View, Image } from "react-native";
 import styles from "./styles.js";
 
 const ListItem = ({ itemDetail }) => {
-  console.log(itemDetail);
   return (
     <View style={styles.containerItem}>
       {/* <Image
