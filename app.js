@@ -43,14 +43,14 @@ passport.use(
         if (config.use_database) {
           // if sets to true
           client.query(
-            "SELECT * from users where user_id = ?",
+            "SELECT * from users where user_id = $1",
             [profile.id],
             (err, rows) => {
               if (err) throw err;
               if (rows && rows.rowCount === 0) {
                 console.log("There is no such user, adding now");
                 client.query(
-                  "INSERT into users(user_id,user_name) VALUES(?, ?)",
+                  "INSERT into users(user_id,user_name) VALUES($1, $2)",
                   [profile.id, profile.displayName]
                 );
               } else {
@@ -92,7 +92,7 @@ app.post(
 
 app.get("/api/contacts/get/:id", (req, res) => {
   client.query(
-    "SELECT * from contacts where user_id = ?",
+    "SELECT * from contacts where user_id = $1",
     [req.params.id],
     (err, rows) => {
       if (err) throw err;
@@ -113,7 +113,7 @@ app.post("/api/contacts/add", (req, res) => {
   client.query("SELECT * from contacts", (err, rows) => {
     if (err) throw err;
     client.query(
-      "INSERT into contacts(user_id,firstName, lastName, email, phone) VALUES(?, ?, ?, ?, ?)",
+      "INSERT into contacts(user_id,firstName, lastName, email, phone) VALUES($1, $2, $3, $4, $5)",
       [
         req.body.user_id,
         req.body.firstName,
@@ -131,7 +131,7 @@ app.post("/api/contacts/add", (req, res) => {
 app.delete("/api/contacts/delete/:id", (req, res) => {
   client.query("SELECT * from contacts", (err, rows) => {
     if (err) throw err;
-    client.query("DELETE FROM contacts WHERE id = ?", [req.params.id]);
+    client.query("DELETE FROM contacts WHERE id = $1", [req.params.id]);
     return res.json({
       data: "Field Deleted"
     });
@@ -141,7 +141,7 @@ app.delete("/api/contacts/delete/:id", (req, res) => {
 app.get("/api/contacts/edit/:id", (req, res) => {
   client.query("SELECT * from contacts", (err, rows) => {
     if (err) throw err;
-    client.query("SELECT * FROM contacts WHERE user_id = ? AND id = ?", [
+    client.query("SELECT * FROM contacts WHERE user_id = $1 AND id = $2", [
       req.params.user_id,
       req.params.id
     ]);
@@ -155,7 +155,7 @@ app.put("/api/contacts/update/:id", (req, res) => {
   client.query("SELECT * from contacts", (err, rows) => {
     if (err) throw err;
     client.query(
-      "UPDATE contacts SET firstname = ?, lastname = ?, email = ?, phone = ? WHERE id = ?",
+      "UPDATE contacts SET firstname = $1, lastname = $2, email = $3, phone = $4 WHERE id = $5",
       [
         req.query.firstName,
         req.query.lastName,
