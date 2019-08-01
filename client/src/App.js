@@ -53,7 +53,13 @@ function App() {
   };
 
   const getContact = async user_id => {
-    console.log(user_id);
+    // await axios
+    //   .get(`/test`, {
+    //     headers: { Authorization: "bearer " + token }
+    //   })
+    //   .then(result => {
+    //     console.log(result);
+    //   });
     await axios.get(`/api/contacts/get/${user_id}`).then(result => {
       setContactList(result.data.data);
       console.log(result.data.data);
