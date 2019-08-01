@@ -8,7 +8,11 @@ const express = require("express"),
   bodyParser = require("body-parser");
 
 const config = require("./configuration/config"),
-  { generateToken, sendToken } = require("./configuration/token");
+  {
+    generateToken,
+    sendToken,
+    validateToken
+  } = require("./configuration/token");
 
 const app = express(),
   corsOption = {
@@ -73,6 +77,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.get("/", function(req, res) {
 //   res.render("index", { user: req.user });
 // });
+
+app.get("/token", validateToken, function(req, res) {
+  if (!req.decoded) {
+    return res.send(401, "Authentication error. Token not entered or invalid");
+  } else {
+    return res.json({
+      data: req.decoded
+    });
+  }
+});
 
 app.post(
   "/api/auth/facebook",
