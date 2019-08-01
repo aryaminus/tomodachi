@@ -73,6 +73,7 @@ $ react-native run-android
 
 - <a href="https://github.com/esausilva/example-create-react-app-express" target="_blank">Connecting React and Node concurrently</a>
 - <a href="https://github.com/alien35/social-auth-example" target="_blank">Usage of Passport for Facebook Login after react callback</a>
+- <a href="https://scotch.io/tutorials/authenticate-a-node-es6-api-with-json-web-tokens" target="_blank">Authenticate API with JWT</a>
 - <a href="https://www.wlaurance.com/2018/09/how-to-install-postgresql-for-mac-for-node/" target="_blank">Setting up Postgresql for Mac</a>
 - <a href="https://datazenit.com/heroku-data-explorer.html?tp=hde#/" target="_blank">Heroku Data Explorer</a>
 - <a href="https://blog.hailstone.io/how-to-prevent-sql-injection-nodejs/" target="_blank">SQL Injection Protection</a>
