@@ -6,7 +6,7 @@ import * as S from "./styles";
 // custom components
 import axios from "axios";
 
-function AddContact({ user_id, getContact, showAddModal }) {
+function AddContact({ user_id, token, getContact, showAddModal }) {
   const [firstName, setFirstName] = useState(``);
   const [lastName, setLastName] = useState(``);
   const [email, setEmail] = useState(``);
@@ -40,11 +40,14 @@ function AddContact({ user_id, getContact, showAddModal }) {
       await axios
         .post(
           `/api/contacts/add?user_id=${user_id}&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`,
+          {
+            headers: { Authorization: "bearer " + token }
+          },
           newContact
         )
         .then(result => {
           console.log(result);
-          getContact(user_id);
+          getContact(user_id, token);
           showAddModal(false);
           setServer(1);
         });

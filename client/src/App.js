@@ -43,16 +43,16 @@ function App() {
       r.json().then(user => {
         if (token) {
           setAuthenticated(true);
+          setToken(token);
           setAvatar(user.photos[0].value);
           setUser(user);
-          setToken(token);
-          getContact(user.id);
+          getContact(user.id, token);
         }
       });
     });
   };
 
-  const getContact = async user_id => {
+  const getContact = async (user_id, token) => {
     // await axios
     //   .get(`/test`, {
     //     headers: { Authorization: "bearer " + token }
@@ -60,10 +60,14 @@ function App() {
     //   .then(result => {
     //     console.log(result);
     //   });
-    await axios.get(`/api/contacts/get/${user_id}`).then(result => {
-      setContactList(result.data.data);
-      console.log(result.data.data);
-    });
+    await axios
+      .get(`/api/contacts/get/${user_id}`, {
+        headers: { Authorization: "bearer " + token }
+      })
+      .then(result => {
+        setContactList(result.data.data);
+        console.log(result.data.data);
+      });
   };
 
   return (
@@ -113,6 +117,7 @@ function App() {
               <S.ContactInfo>
                 <ContactInfo
                   person={person}
+                  token={token}
                   getContact={getContact}
                   sethideContact={sethideContact}
                 />
@@ -147,6 +152,7 @@ function App() {
             <S.AddContactTitle>Add Contact</S.AddContactTitle>
             <AddContact
               user_id={user.id}
+              token={token}
               getContact={getContact}
               showAddModal={showAddModal}
             />

@@ -11,16 +11,20 @@ import Rodal from "rodal";
 // imports
 import EditContact from "../EditContact";
 
-function ContactInfo({ person, getContact, sethideContact }) {
+function ContactInfo({ person, token, getContact, sethideContact }) {
   const [editModal, showEditModal] = useState(false);
 
   const dalete = async () => {
     console.log(person);
-    await axios.delete(`/api/contacts/delete/${person.id}`).then(result => {
-      console.log(result);
-      getContact(person.user_id);
-      sethideContact(true);
-    });
+    await axios
+      .delete(`/api/contacts/delete/${person.id}`, {
+        headers: { Authorization: "bearer " + token }
+      })
+      .then(result => {
+        console.log(result);
+        getContact(person.user_id, token);
+        sethideContact(true);
+      });
   };
 
   return (
@@ -59,6 +63,7 @@ function ContactInfo({ person, getContact, sethideContact }) {
             <div>Edit Contact</div>
             <EditContact
               person={person}
+              token={token}
               getContact={getContact}
               showEditModal={showEditModal}
             />
