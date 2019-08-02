@@ -39,34 +39,21 @@ const Fblogin = () => {
       }
 
       // console.log(data);
-      const tokenBlob = new Blob(
-        [
-          JSON.stringify({ access_token: data.accessToken.toString() }, null, 2)
-        ],
-        { type: "application/json" }
-      );
-      const options = {
-        method: "POST",
-        body: tokenBlob,
-        mode: "cors",
-        cache: "default"
-      };
-      fetch(
-        "https://tomodachi977.herokuapp.com/api/auth/facebook",
-        options
-      ).then(r => {
-        const token = r.headers.get("x-auth-token");
-        r.json().then(user => {
+      await axios
+        .post(`https://tomodachi977.herokuapp.com/api/auth/facebook`, {
+          access_token: data.accessToken.toString()
+        })
+        .then(r => {
+          console.log(r);
+          const token = r.headers["x-auth-token"];
           if (token) {
-            // console.log(user);
             // setAuthenticated(true);
-            // setAvatar(user.photos[0].value);
-            // setUser(user);
             // setToken(token);
-            getContact(user.photos[0].value, user, token, user.id);
+            // setAvatar(r.data.photos[0].value);
+            // setUser(r.data);
+            getContact(r.data.photos[0].value, r.data, token, r.data.id);
           }
         });
-      });
     } catch (err) {
       LoginManager.logOut();
       alert(err);
@@ -76,7 +63,9 @@ const Fblogin = () => {
 
   const getContact = async (avatar, user, token, user_id) => {
     await axios
-      .get(`https://tomodachi977.herokuapp.com/api/contacts/get/${user_id}`)
+      .get(`https://tomodachi977.herokuapp.com/api/contacts/get/${user_id}`, {
+        headers: { Authorization: "bearer " + token }
+      })
       .then(result => {
         // setContactList(result.data.data);
         Actions.listView({
@@ -91,10 +80,10 @@ const Fblogin = () => {
   return (
     <React.Fragment>
       <StatusBar
-      // hidden
-      // translucent
-      // backgroundColor="#3672B9"
-      // barStyle="light-content"
+        // hidden
+        translucent
+        backgroundColor="#3672B9"
+        barStyle="light-content"
       />
       <View style={styles.container}>
         <ImageBackground source={Background} style={styles.backgroundImage}>

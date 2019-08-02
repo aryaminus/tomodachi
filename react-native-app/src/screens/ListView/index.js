@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import {
   Linking,
-  StatusBar,
   ScrollView,
   Text,
   TouchableOpacity,
@@ -41,7 +40,9 @@ function ListView({ avatar, user, token, contactList }) {
 
   const dalete = async id => {
     await axios
-      .delete(`https://tomodachi977.herokuapp.com/api/contacts/delete/${id}`)
+      .delete(`https://tomodachi977.herokuapp.com/api/contacts/delete/${id}`, {
+        headers: { Authorization: "bearer " + token }
+      })
       .then(result => {
         console.log(result);
         getContact(user.id);
@@ -53,7 +54,9 @@ function ListView({ avatar, user, token, contactList }) {
     // console.log("here");
     console.log(user_id);
     await axios
-      .get(`https://tomodachi977.herokuapp.com/api/contacts/get/${user_id}`)
+      .get(`https://tomodachi977.herokuapp.com/api/contacts/get/${user_id}`, {
+        headers: { Authorization: "bearer " + token }
+      })
       .then(result => {
         setContacts(result.data.data);
       });
@@ -61,12 +64,6 @@ function ListView({ avatar, user, token, contactList }) {
 
   return (
     <View style={styles.bg}>
-      <StatusBar
-        // hidden
-        translucent
-        backgroundColor="#3672B9"
-        barStyle="light-content"
-      />
       <View style={styles.containerLists}>
         <ScrollView>
           <View style={styles.top}>
@@ -135,6 +132,7 @@ function ListView({ avatar, user, token, contactList }) {
                           edit: true,
                           item: modalItem,
                           person: user,
+                          token: token,
                           getContact: getContact
                         });
                       }}
@@ -167,6 +165,7 @@ function ListView({ avatar, user, token, contactList }) {
               edit: false,
               item: null,
               person: user,
+              token: token,
               getContact: getContact
             });
           }}

@@ -104,7 +104,7 @@ app.post(
   sendToken
 );
 
-app.get("/api/contacts/get/:id", validateToken, (req, res) => {
+app.get("/api/contacts/get/:id", validateToken, function(req, res) {
   if (!req.decoded) {
     return res.send(401, "Authentication error. Token not entered or invalid");
   } else {
@@ -127,7 +127,7 @@ app.get("/api/contacts/get/:id", validateToken, (req, res) => {
   }
 });
 
-app.post("/api/contacts/add", validateToken, (req, res) => {
+app.post("/api/contacts/add", validateToken, function(req, res) {
   if (!req.decoded) {
     return res.send(401, "Authentication error. Token not entered or invalid");
   } else {
@@ -150,7 +150,7 @@ app.post("/api/contacts/add", validateToken, (req, res) => {
   }
 });
 
-app.delete("/api/contacts/delete/:id", validateToken, (req, res) => {
+app.delete("/api/contacts/delete/:id", validateToken, function(req, res) {
   if (!req.decoded) {
     return res.send(401, "Authentication error. Token not entered or invalid");
   } else {
@@ -164,7 +164,7 @@ app.delete("/api/contacts/delete/:id", validateToken, (req, res) => {
   }
 });
 
-app.get("/api/contacts/edit/:id", validateToken, (req, res) => {
+app.get("/api/contacts/edit/:id", validateToken, function(req, res) {
   if (!req.decoded) {
     return res.send(401, "Authentication error. Token not entered or invalid");
   } else {
@@ -181,7 +181,7 @@ app.get("/api/contacts/edit/:id", validateToken, (req, res) => {
   }
 });
 
-app.put("/api/contacts/update/:id", validateToken, (req, res) => {
+app.put("/api/contacts/update/:id", validateToken, function(req, res) {
   if (!req.decoded) {
     return res.send(401, "Authentication error. Token not entered or invalid");
   } else {

@@ -42,10 +42,10 @@ function EditContact({ person, token, getContact, showEditModal }) {
       await axios
         .put(
           `/api/contacts/update/${id}?user_id=${user_id}&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`,
+          newContact,
           {
             headers: { Authorization: "bearer " + token }
-          },
-          newContact
+          }
         )
         .then(result => {
           console.log(result);
