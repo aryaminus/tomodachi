@@ -19,10 +19,17 @@ export default (FBLoginButton = ({ onLogIn }) => {
 });
 const iconStyles = {
   borderRadius: 10,
+  borderWidth: 2,
+  shadowColor: "#fff",
+  shadowOffset: { width: 0, height: 2 },
+  shadowOpacity: 0.8,
+  shadowRadius: 2,
+  elevation: 5,
+  borderColor: "#b7d3efc7",
   iconStyle: { paddingVertical: 5 },
   alignSelf: "center",
   alignItems: "center",
   justifyContent: "center",
   height: 60,
-  width: "80%"
+  width: "100%"
 };

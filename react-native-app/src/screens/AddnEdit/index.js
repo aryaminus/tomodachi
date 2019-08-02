@@ -9,7 +9,7 @@ import axios from "axios";
 import styles from "./styles.js";
 import Icon from "react-native-vector-icons/Ionicons";
 
-function Form({ edit, item, person, getContact }) {
+function Form({ edit, item, person, token, getContact }) {
   const [firstName, setFirstName] = useState(edit ? item.firstname : ``);
   const [lastName, setLastName] = useState(edit ? item.lastname : ``);
   const [email, setEmail] = useState(edit ? item.email : ``);
@@ -46,7 +46,10 @@ function Form({ edit, item, person, getContact }) {
         await axios
           .put(
             `https://tomodachi977.herokuapp.com/api/contacts/update/${id}?user_id=${user_id}&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`,
-            newContact
+            newContact,
+            {
+              headers: { Authorization: "bearer " + token }
+            }
           )
           .then(result => {
             console.log(result);
@@ -58,7 +61,10 @@ function Form({ edit, item, person, getContact }) {
         await axios
           .post(
             `https://tomodachi977.herokuapp.com/api/contacts/add?user_id=${user_id}&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`,
-            newContact
+            newContact,
+            {
+              headers: { Authorization: "bearer " + token }
+            }
           )
           .then(result => {
             console.log(result);
