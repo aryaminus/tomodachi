@@ -48,17 +48,18 @@ $ NODE_ENV=production yarn dev:server
 
 ## React-Native
 
-**Start server**
+**Start react-native server:**
 
 ```
 $ cd react-native-app
 $ yarn start
 ```
 
-**Start development build of react-native:**
+**Development build of react-native:**
 
 ```
 $ react-native run-android
+$ react-native run-ios
 ```
 
 ## Contributing
