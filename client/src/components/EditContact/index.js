@@ -6,11 +6,17 @@ import * as S from "./styles";
 // custom components
 import axios from "axios";
 
-function EditContact({ person, token, getContact, showEditModal }) {
-  const [firstName, setFirstName] = useState(``);
-  const [lastName, setLastName] = useState(``);
-  const [email, setEmail] = useState(``);
-  const [phone, setPhone] = useState(``);
+function EditContact({
+  person,
+  token,
+  getContact,
+  showEditModal,
+  sethideContact
+}) {
+  const [firstName, setFirstName] = useState(person.firstname);
+  const [lastName, setLastName] = useState(person.lastname);
+  const [email, setEmail] = useState(person.email);
+  const [phone, setPhone] = useState(person.phone);
   const [error, setError] = useState(``);
   const [output, setOutput] = useState(false);
   const [server, setServer] = useState(0);
@@ -50,6 +56,7 @@ function EditContact({ person, token, getContact, showEditModal }) {
         .then(result => {
           console.log(result);
           getContact(user_id, token);
+          sethideContact(true);
           showEditModal(false);
           setServer(1);
         });
@@ -61,7 +68,8 @@ function EditContact({ person, token, getContact, showEditModal }) {
       <center>
         <br />
         <S.Input
-          placeholder={person.firstname}
+          placeholder="First Name"
+          defaultValue={person.firstname}
           autoComplete="off"
           autoCorrect="off"
           autoCapitalize="off"
@@ -70,7 +78,8 @@ function EditContact({ person, token, getContact, showEditModal }) {
         />
 
         <S.Input
-          placeholder={person.lastname}
+          placeholder="Last Name"
+          defaultValue={person.lastname}
           autoComplete="off"
           autoCorrect="off"
           autoCapitalize="off"
@@ -79,7 +88,8 @@ function EditContact({ person, token, getContact, showEditModal }) {
         />
 
         <S.Input
-          placeholder={person.email}
+          placeholder="Email"
+          defaultValue={person.email}
           autoComplete="off"
           autoCorrect="off"
           autoCapitalize="off"
@@ -88,7 +98,8 @@ function EditContact({ person, token, getContact, showEditModal }) {
         />
 
         <S.Input
-          placeholder={person.phone}
+          placeholder="Phone Number"
+          defaultValue={person.phone}
           autoComplete="off"
           autoCorrect="off"
           autoCapitalize="off"

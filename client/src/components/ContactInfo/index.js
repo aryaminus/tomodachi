@@ -66,6 +66,7 @@ function ContactInfo({ person, token, getContact, sethideContact }) {
               token={token}
               getContact={getContact}
               showEditModal={showEditModal}
+              sethideContact={sethideContact}
             />
           </Rodal>
         </S.Content>
