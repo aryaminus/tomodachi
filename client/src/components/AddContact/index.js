@@ -40,10 +40,10 @@ function AddContact({ user_id, token, getContact, showAddModal }) {
       await axios
         .post(
           `/api/contacts/add?user_id=${user_id}&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`,
+          newContact,
           {
             headers: { Authorization: "bearer " + token }
-          },
-          newContact
+          }
         )
         .then(result => {
           console.log(result);

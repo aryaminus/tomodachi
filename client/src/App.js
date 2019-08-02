@@ -26,35 +26,26 @@ function App() {
   const [hideContact, sethideContact] = useState(false);
   const [person, setPerson] = useState(null);
 
-  const responseFacebook = response => {
+  const responseFacebook = async response => {
     console.log(response);
-    const tokenBlob = new Blob(
-      [JSON.stringify({ access_token: response.accessToken }, null, 2)],
-      { type: "application/json" }
-    );
-    const options = {
-      method: "POST",
-      body: tokenBlob,
-      mode: "cors",
-      cache: "default"
-    };
-    fetch("/api/auth/facebook", options).then(r => {
-      const token = r.headers.get("x-auth-token");
-      r.json().then(user => {
+    await axios
+      .post(`/api/auth/facebook`, { access_token: response.accessToken })
+      .then(r => {
+        console.log(r);
+        const token = r.headers["x-auth-token"];
         if (token) {
           setAuthenticated(true);
           setToken(token);
-          setAvatar(user.photos[0].value);
-          setUser(user);
-          getContact(user.id, token);
+          setAvatar(r.data.photos[0].value);
+          setUser(r.data);
+          getContact(r.data.id, token);
         }
       });
-    });
   };
 
   const getContact = async (user_id, token) => {
     // await axios
-    //   .get(`/test`, {
+    //   .get(`/token`, {
     //     headers: { Authorization: "bearer " + token }
     //   })
     //   .then(result => {
