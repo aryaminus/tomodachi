@@ -6,7 +6,7 @@ import * as S from "./styles";
 // custom components
 import axios from "axios";
 
-function EditContact({ person, getContact, showEditModal }) {
+function EditContact({ person, token, getContact, showEditModal }) {
   const [firstName, setFirstName] = useState(``);
   const [lastName, setLastName] = useState(``);
   const [email, setEmail] = useState(``);
@@ -42,11 +42,14 @@ function EditContact({ person, getContact, showEditModal }) {
       await axios
         .put(
           `/api/contacts/update/${id}?user_id=${user_id}&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`,
+          {
+            headers: { Authorization: "bearer " + token }
+          },
           newContact
         )
         .then(result => {
           console.log(result);
-          getContact(user_id);
+          getContact(user_id, token);
           showEditModal(false);
           setServer(1);
         });

@@ -49,7 +49,7 @@ passport.use(
           client.query(
             "SELECT * from users where user_id = $1",
             [profile.id],
-            (err, rows) => {
+            function(err, rows) {
               if (err) throw err;
               if (rows && rows.rowCount === 0) {
                 console.log("There is no such user, adding now");
@@ -104,84 +104,104 @@ app.post(
   sendToken
 );
 
-app.get("/api/contacts/get/:id", (req, res) => {
-  client.query(
-    "SELECT * from contacts where user_id = $1",
-    [req.params.id],
-    (err, rows) => {
-      if (err) throw err;
-      if (rows) {
-        return res.json({
-          data: rows.rows
-        });
-      } else {
-        return res.json({
-          data: "No content"
-        });
+app.get("/api/contacts/get/:id", validateToken, (req, res) => {
+  if (!req.decoded) {
+    return res.send(401, "Authentication error. Token not entered or invalid");
+  } else {
+    client.query(
+      "SELECT * from contacts where user_id = $1",
+      [req.params.id],
+      function(err, rows) {
+        if (err) throw err;
+        if (rows) {
+          return res.json({
+            data: rows.rows
+          });
+        } else {
+          return res.json({
+            data: "No content"
+          });
+        }
       }
-    }
-  );
-});
-
-app.post("/api/contacts/add", (req, res) => {
-  client.query("SELECT * from contacts", (err, rows) => {
-    if (err) throw err;
-    client.query(
-      "INSERT into contacts(user_id,firstName, lastName, email, phone) VALUES($1, $2, $3, $4, $5)",
-      [
-        req.body.user_id,
-        req.body.firstName,
-        req.body.lastName,
-        req.body.email,
-        req.body.phone
-      ]
     );
-    return res.json({
-      data: "Field Added"
-    });
-  });
+  }
 });
 
-app.delete("/api/contacts/delete/:id", (req, res) => {
-  client.query("SELECT * from contacts", (err, rows) => {
-    if (err) throw err;
-    client.query("DELETE FROM contacts WHERE id = $1", [req.params.id]);
-    return res.json({
-      data: "Field Deleted"
+app.post("/api/contacts/add", validateToken, (req, res) => {
+  if (!req.decoded) {
+    return res.send(401, "Authentication error. Token not entered or invalid");
+  } else {
+    client.query("SELECT * from contacts", function(err, rows) {
+      if (err) throw err;
+      client.query(
+        "INSERT into contacts(user_id,firstName, lastName, email, phone) VALUES($1, $2, $3, $4, $5)",
+        [
+          req.body.user_id,
+          req.body.firstName,
+          req.body.lastName,
+          req.body.email,
+          req.body.phone
+        ]
+      );
+      return res.json({
+        data: "Field Added"
+      });
     });
-  });
+  }
 });
 
-app.get("/api/contacts/edit/:id", (req, res) => {
-  client.query("SELECT * from contacts", (err, rows) => {
-    if (err) throw err;
-    client.query("SELECT * FROM contacts WHERE user_id = $1 AND id = $2", [
-      req.params.user_id,
-      req.params.id
-    ]);
-    return res.json({
-      data: "Field Deleted"
+app.delete("/api/contacts/delete/:id", validateToken, (req, res) => {
+  if (!req.decoded) {
+    return res.send(401, "Authentication error. Token not entered or invalid");
+  } else {
+    client.query("SELECT * from contacts", function(err, rows) {
+      if (err) throw err;
+      client.query("DELETE FROM contacts WHERE id = $1", [req.params.id]);
+      return res.json({
+        data: "Field Deleted"
+      });
     });
-  });
+  }
 });
 
-app.put("/api/contacts/update/:id", (req, res) => {
-  client.query("SELECT * from contacts", (err, rows) => {
-    if (err) throw err;
-    client.query(
-      "UPDATE contacts SET firstname = $1, lastname = $2, email = $3, phone = $4 WHERE id = $5",
-      [
-        req.query.firstName,
-        req.query.lastName,
-        req.query.email,
-        req.query.phone,
+app.get("/api/contacts/edit/:id", validateToken, (req, res) => {
+  if (!req.decoded) {
+    return res.send(401, "Authentication error. Token not entered or invalid");
+  } else {
+    client.query("SELECT * from contacts", function(err, rows) {
+      if (err) throw err;
+      client.query("SELECT * FROM contacts WHERE user_id = $1 AND id = $2", [
+        req.params.user_id,
         req.params.id
-      ]
-    );
-    return res.json({
-      data: "Field Updated"
+      ]);
+      return res.json({
+        data: "Field Deleted"
+      });
     });
-  });
+  }
+});
+
+app.put("/api/contacts/update/:id", validateToken, (req, res) => {
+  if (!req.decoded) {
+    return res.send(401, "Authentication error. Token not entered or invalid");
+  } else {
+    client.query("SELECT * from contacts", function(err, rows) {
+      if (err) throw err;
+      client.query(
+        "UPDATE contacts SET firstname = $1, lastname = $2, email = $3, phone = $4 WHERE id = $5",
+        [
+          req.query.firstName,
+          req.query.lastName,
+          req.query.email,
+          req.query.phone,
+          req.params.id
+        ]
+      );
+      return res.json({
+        data: "Field Updated"
+      });
+    });
+  }
 });
 
 // app.get("/account", ensureAuthenticated, function(req, res) {
