@@ -37,9 +37,14 @@ client.connect();
 // Use the FacebookStrategy within Passport.
 passport.use(
   new FacebookTokenStrategy(
+    // If using from config
+    // {
+    //   clientID: config.facebook_api_key,
+    //   clientSecret: config.facebook_api_secret
+    // },
     {
-      clientID: config.facebook_api_key,
-      clientSecret: config.facebook_api_secret
+      clientID: process.env.facebook_api_key,
+      clientSecret: process.env.facebook_api_secret
     },
     function(accessToken, refreshToken, profile, done) {
       process.nextTick(function() {
