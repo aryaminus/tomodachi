@@ -1,4 +1,5 @@
-# Tomodachi
+# <p align="center"> Tomodachi </p>
+<p align="center">For more refer to <a href="https://link.medium.com/Ka24DtaDQY" target="_blank">Medium Article, </a><a href="https://tomodachi977.herokuapp.com" target="_blank">Heroku, </a><a href="https://drive.google.com/file/d/1vKTbBZGRYNouZ9nkIeMz6yzbNjcXGBfR/view" target="_blank">Android APK </a></p>
 
 > Alpha release
 
