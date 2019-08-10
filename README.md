@@ -1,7 +1,7 @@
 # <p align="center"> Tomodachi </p>
 
 <p align="center">
-    <a href="https://tomodachi977.herokuapp.com" target="_blank"><img src="https://i.imgur.com/iwWOtYs.gif" height="250"/></a>&nbsp;&nbsp;<a href="https://play.google.com/store/apps/details?id=com.speks.tomodachi" target="_blank"><img src="https://i.imgur.com/wNTGqCU.gif" height="250"/></a>
+    <a href="https://tomodachi977.herokuapp.com" target="_blank"><img src="https://i.imgur.com/iwWOtYs.gif" height="330"/></a>&nbsp;&nbsp;<a href="https://play.google.com/store/apps/details?id=com.speks.tomodachi" target="_blank"><img src="https://i.imgur.com/wNTGqCU.gif" height="330"/></a>
 </p>
 
 <p align="center">
