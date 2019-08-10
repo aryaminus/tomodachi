@@ -1,6 +1,9 @@
 # <p align="center"> Tomodachi </p>
 <p align="center">
   <img alt="UI GIF" src="https://i.imgur.com/iwWOtYs.gif"> 
+    <a href="https://play.google.com/store/apps/details?id=com.speks.nazar" target="_blank"><img src="http://i.imgur.com/D5B4zOT.png" height="75"/></a>
+</p>
+
 </p>
 <p align="center">For more refer to <a href="https://link.medium.com/Ka24DtaDQY" target="_blank">Medium Article, </a><a href="https://tomodachi977.herokuapp.com" target="_blank">Heroku, </a><a href="https://drive.google.com/file/d/1vKTbBZGRYNouZ9nkIeMz6yzbNjcXGBfR/view" target="_blank">Android APK </a></p>
 
