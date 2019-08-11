@@ -26,8 +26,7 @@ const port = process.env.PORT || 5000;
 
 //Define Postgres parameters
 // let connectionString = "postgresql://localhost/arms";
-let connectionString =
-  "postgres://gtosqajvewsfyx:6e7aaefd0cf08f6e54f48cdd4029d21a226b53d6dbda9cb43b42e5164c5d5e38@ec2-107-20-185-16.compute-1.amazonaws.com:5432/d7ij3pco2968rk";
+let connectionString = process.env.DATABASE_URL;
 const client = new Client({
   connectionString: connectionString,
   ssl: true
